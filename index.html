@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="es" data-temas>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Guica · Algo más que fabricantes de productos químicos</title>
+  <meta name="description" content="Formulamos, fabricamos y envasamos en Madrid química profesional desde 1979: hostelería, industria, automoción, lavandería y cinco sectores más. ISO 9001 e ISO 14001.">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F161D" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Guica">
+  <meta property="og:url" content="https://grupo-soto.github.io/guica/">
+  <meta property="og:title" content="Guica · Algo más que fabricantes de productos químicos">
+  <meta property="og:description" content="Formulamos, fabricamos y envasamos en Madrid química profesional desde 1979 para hostelería, industria, automoción, lavandería y cinco sectores más.">
+  <meta property="og:image" content="https://grupo-soto.github.io/guica/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Algo más que fabricantes de productos químicos: el MÁS relleno de una foto del laboratorio de Guica.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <!-- Datos de la empresa para Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://guica.es/#empresa",
+    "name": "GUICA, S.A.",
+    "alternateName": "Guica",
+    "description": "Fabricante de productos químicos de limpieza e higiene profesional desde 1979: formulamos, fabricamos y envasamos en San Fernando de Henares (Madrid).",
+    "url": "https://guica.es/",
+    "logo": "https://guica.es/assets/marca/logos/guica.png",
+    "image": "https://guica.es/assets/img/og.jpg",
+    "telephone": "+34 916 76 10 11",
+    "taxID": "A28595726",
+    "foundingDate": "1979",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. de la Astronomía, 17, Pol. Ind. nº III",
+      "postalCode": "28830",
+      "addressLocality": "San Fernando de Henares",
+      "addressRegion": "Madrid",
+      "addressCountry": "ES"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "08:00", "closes": "17:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "15:00" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/guica_sa/",
+      "https://www.linkedin.com/company/guica-sa",
+      "https://www.facebook.com/people/Guica-SA/61572225068929/"
+    ],
+    "parentOrganization": { "@type": "Organization", "name": "Grupo Soto", "url": "https://gruposoto.net/" }
+  }
+  </script>
+  <link rel="preload" as="image" href="assets/img/nave/sm/lab-estanteria-sel.webp">
+  <link rel="stylesheet" href="assets/marca/fuentes/fuentes.css">
+  <link rel="stylesheet" href="assets/marca/colores.css">
+  <link rel="stylesheet" href="assets/fuentes/poppins/poppins.css">
+  <link rel="stylesheet" href="assets/css/comun.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/espacio.css">
+  <script>
+    // Pantalla de carga hasta que fuentes y animaciones estén listas (src/carga.js); si el JS fallara, se quita a los 5 s
+    document.documentElement.classList.add('cargando');
+    setTimeout(function () { if (!window.__cargaLista) document.documentElement.classList.remove('cargando'); }, 5000);
+    // Modo claro u oscuro elegido con el botón de la cabecera («guica-tema»; si no, el del sistema), antes de pintar
+    try { var tema = localStorage.getItem('guica-tema'); if (tema === 'claro' || tema === 'oscuro') document.documentElement.setAttribute('data-tema', tema); } catch (e) {}
+    // Oculta lo que se anima al entrar solo si hay JS y movimiento; si app.js no arranca, todo se ve igual.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('anim');
+      setTimeout(function () { if (!window.__guica) document.documentElement.classList.remove('anim'); }, 2500);
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Iconos y piezas gráficas -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-abajo" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></symbol>
+      <symbol id="i-drag" viewBox="0 0 24 24"><path d="M9 7 4 12l5 5M15 7l5 5-5 5"/></symbol>
+      <!-- Destello de cuatro puntas (brillo de limpio) -->
+      <symbol id="destello" viewBox="0 0 24 24"><path d="M12 0c.9 7.2 4.8 11.1 12 12-7.2.9-11.1 4.8-12 12-.9-7.2-4.8-11.1-12-12C7.2 11.1 11.1 7.2 12 0z"/></symbol>
+      <!-- Recorrido «De la fórmula a tu almacén»: degradados y garrafa pequeña -->
+      <pattern id="r-trama" width="4.5" height="4.5" patternUnits="userSpaceOnUse"><rect width="4.5" height="4.5" fill="#F4F7F9"/><circle cx="2.25" cy="2.25" r="1.05" fill="#7F96A6"/></pattern>
+      <pattern id="r-trama-fina" width="4.5" height="4.5" patternUnits="userSpaceOnUse"><rect width="4.5" height="4.5" fill="#FBFCFD"/><circle cx="2.25" cy="2.25" r=".7" fill="#9FB2BF"/></pattern>
+      <pattern id="r-trama-tubo" width="3.5" height="3.5" patternUnits="userSpaceOnUse"><rect width="3.5" height="3.5" fill="#EEF3F6"/><circle cx="1.75" cy="1.75" r=".8" fill="#8EA4B3"/></pattern>
+      <linearGradient id="r-liq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4DBDF4"/><stop offset="1" stop-color="#1679B5"/></linearGradient>
+      <linearGradient id="r-acero" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BCC8D0"/><stop offset=".35" stop-color="#EEF2F5"/><stop offset=".6" stop-color="#D6DEE4"/><stop offset="1" stop-color="#AEBBC4"/></linearGradient>
+      <linearGradient id="r-vidrio" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".3" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#E3F1FA" stop-opacity=".5"/></linearGradient>
+      <linearGradient id="r-garrafa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".3" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".3" stop-color="#9ED6F4"/><stop offset="1" stop-color="#5DB6E6"/></linearGradient>
+      <symbol id="r-garrafa-mini" viewBox="-2 -14 104 146" overflow="visible">
+        <path d="M6 130H94Q100 130 100 124V30Q100 20 90 16L72 10V0H56V10H26Q6 10 6 30Z" fill="url(#r-trama-fina)"/>
+        <path d="M6 130H94Q100 130 100 124V30Q100 20 90 16L72 10V0H56V10H26Q6 10 6 30Z" fill="url(#r-garrafa)" stroke="#0B4F7C" stroke-width="2.2"/>
+        <rect x="14" y="20" width="30" height="10" rx="5" fill="#EEF3F6" stroke="#8FA2AF" stroke-width="2"/>
+        <rect x="53" y="-12" width="22" height="13" rx="2.5" fill="#1D93D1"/>
+        <rect x="24" y="64" width="52" height="26" rx="2" fill="#fff" opacity=".9"/>
+        <rect x="30" y="72" width="40" height="4" rx="2" fill="#0B4F7C"/>
+        <rect x="30" y="80" width="26" height="3" rx="1.5" fill="#1D93D1"/>
+      </symbol>
+    </defs>
+  </svg>
+  <!-- Iconos, cabecera, pie, barra de pestañas y hoja del pedido: los mismos de la tienda. Lo que va entre
+       las marcas «comun:…» lo escribe src/catalogo/generar.mjs (npm run catalogo -w webs/guica): no editarlo a mano. -->
+  <!-- comun:sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20h-5.5v-5.5h-5V20H4z"/></symbol>
+    <symbol id="i-tienda" viewBox="0 0 24 24"><path d="M4 9.5 5.5 4h13L20 9.5"/><path d="M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 12v8h13v-8M10 20v-4.5h4V20"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-usuario" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20.5c.9-3.9 3.9-6 7.5-6s6.6 2.1 7.5 6"/></symbol>
+    <symbol id="i-ojo" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-salir" viewBox="0 0 24 24"><path d="M14 4h4.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H14M10 8l-4 4 4 4M6 12h10"/></symbol>
+    <symbol id="i-repetir" viewBox="0 0 24 24"><path d="M4 11a8 8 0 0 1 14.3-4.9L20 8M20 4v4h-4M20 13a8 8 0 0 1-14.3 4.9L4 16M4 20v-4h4"/></symbol>
+    <symbol id="i-etiqueta" viewBox="0 0 24 24"><path d="M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1l8 8a1.4 1.4 0 0 1 0 2l-7 7a1.4 1.4 0 0 1-2 0z"/><circle cx="8.3" cy="8.3" r="1.5"/></symbol>
+    <symbol id="i-camion" viewBox="0 0 24 24"><path d="M2.5 6.5h11v10h-11zM13.5 10h4l3 3.2v3.3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-luna" viewBox="0 0 24 24"><path d="M19.5 14.6A7.8 7.8 0 0 1 9.4 4.5a7.8 7.8 0 1 0 10.1 10.1z"/></symbol>
+    <symbol id="i-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15.5h6"/></symbol>
+    <symbol id="i-filtro" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+    <symbol id="i-flechas" viewBox="0 0 24 24"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8.2 7 9.5 4-1.3 7-5.1 7-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-candado" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5"/></symbol>
+    <symbol id="i-matraz" viewBox="0 0 24 24"><path d="M9.5 3h5M10 3v6L4.8 18.2A1.9 1.9 0 0 0 6.5 21h11a1.9 1.9 0 0 0 1.7-2.8L14 9V3"/><path d="M7.2 15h9.6"/></symbol>
+    <symbol id="i-fabrica" viewBox="0 0 24 24"><path d="M3 20V10l5 3V10l5 3V5h4l1 15z"/><path d="M3 20h18M7 17h2M12 17h2"/></symbol>
+    <symbol id="i-correo" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-presupuesto" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 15.5h3"/></symbol>
+    <symbol id="i-alerta" viewBox="0 0 24 24"><path d="M12 4 2.8 19.5h18.4z"/><path d="M12 10v4.5M12 17.2v.01"/></symbol>
+    <symbol id="i-estrella" viewBox="0 0 24 24"><path d="m12 3.2 2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-2.9-5.4 2.9 1.1-6-4.5-4.2 6.1-.8z"/></symbol>
+    <symbol id="i-cesta" viewBox="0 0 24 24"><path d="M4 9h16l-1.5 10.5a1.5 1.5 0 0 1-1.5 1.3H7a1.5 1.5 0 0 1-1.5-1.3z"/><path d="m8 9 3-5M16 9l-3-5"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V16M8 7.8v.01M11.5 16v-5.5M11.5 13c0-1.7 1-2.6 2.3-2.6s2.2.9 2.2 2.6V16"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M15.5 8.5h-1.8c-1 0-1.7.7-1.7 1.7V20M9.5 13h5"/></symbol>
+    <symbol id="m-pulv" viewBox="0 0 24 24"><path d="M8 10h6v10a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"/><path d="M9 10V7h5l3 2h-3"/><path d="M19.5 6v.01M21 9v.01M19.5 12v.01"/></symbol>
+    <symbol id="m-frega" viewBox="0 0 24 24"><path d="M15 3 10.5 14"/><path d="M6 14h9l2 6H4z"/><path d="M7.5 20 7 22M10.5 20v2M13.5 20l.5 2"/></symbol>
+    <symbol id="m-maquina" viewBox="0 0 24 24"><rect x="4" y="4" width="11" height="16" rx="1.5"/><circle cx="9.5" cy="9.5" r="2.5"/><path d="M7.5 15.5h4M15 12h3.5a1 1 0 0 1 1 1v8"/></symbol>
+    <symbol id="m-inmersion" viewBox="0 0 24 24"><path d="M4 10v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9"/><path d="M4 14.5c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1"/><path d="M12 3v8M9.5 8.5 12 11l2.5-2.5"/></symbol>
+    <symbol id="m-bayeta" viewBox="0 0 24 24"><path d="M3.5 8c3-2 5.5 2 8.5 0s5.5-2 8.5 0v8.5c-3-2-5.5 2-8.5 0s-5.5-2-8.5 0z"/><path d="M7 11.5h10"/></symbol>
+    <symbol id="m-cepillo" viewBox="0 0 24 24"><path d="M4 13h16v3H4z"/><path d="M6 16v4M9 16v4M12 16v4M15 16v4M18 16v4"/><path d="M8 13V9a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4"/></symbol>
+    <symbol id="m-espuma" viewBox="0 0 24 24"><circle cx="9" cy="9" r="4"/><circle cx="16.5" cy="13" r="3"/><circle cx="10" cy="17.5" r="2.5"/><circle cx="17" cy="5.5" r="1.5"/></symbol>
+    <symbol id="m-manos" viewBox="0 0 24 24"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v5M11 11V4.5a1.5 1.5 0 0 1 3 0V11M14 11V6a1.5 1.5 0 0 1 3 0v7c0 4-2.5 7-6 7s-5-2-6.5-4.5L3 12a1.5 1.5 0 0 1 2.5-1.6L8 13"/></symbol>
+    <symbol id="m-puro" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9 14.5a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="garrafa" viewBox="-4 -16 108 150">
+      <path d="M6 130H94Q100 130 100 124V30Q100 20 90 16L72 10V0H56V10H26Q6 10 6 30Z" fill="none" stroke="#9AA9B6" stroke-width="1.6" stroke-dasharray="4 4"/>
+      <rect x="53" y="-12" width="22" height="13" rx="2.5" fill="none" stroke="#9AA9B6" stroke-width="1.6"/>
+      <rect x="24" y="62" width="52" height="30" rx="2" fill="none" stroke="#B9C5CF" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="caja" viewBox="-4 -4 128 108">
+      <path d="M4 26h112v70H4z" fill="none" stroke="#9AA9B6" stroke-width="1.6" stroke-dasharray="4 4"/>
+      <path d="M4 26 14 6h92l10 20" fill="none" stroke="#9AA9B6" stroke-width="1.6" stroke-dasharray="4 4" stroke-linejoin="round"/>
+      <rect x="30" y="58" width="60" height="22" rx="2" fill="none" stroke="#B9C5CF" stroke-width="1.6"/>
+    </symbol>
+  </defs>
+</svg>
+  <!-- /comun:sprite -->
+
+  <!-- comun:cabecera -->
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div class="aviso" role="region" aria-label="Avisos">
+    <div class="aviso__in">
+      <ul class="aviso__lista" data-aviso>
+        <li class="is-activo"><svg class="ico" aria-hidden="true"><use href="#i-fabrica"/></svg> <span><b>Fabricantes</b> de química profesional desde 1979</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-presupuesto"/></svg> <span><b>Presupuesto sin compromiso:</b> no pagas nada en la web</span></li>
+        <li><span class="estrellas" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-estrella"/></svg><svg class="ico" aria-hidden="true"><use href="#i-estrella"/></svg><svg class="ico" aria-hidden="true"><use href="#i-estrella"/></svg><svg class="ico" aria-hidden="true"><use href="#i-estrella"/></svg><svg class="ico" aria-hidden="true"><use href="#i-estrella"/></svg></span> <span><b>4,7</b> en Google · Asesoramiento <a href="tel:+34916761011">916 761 011</a></span></li>
+      </ul>
+      <nav class="aviso__web" aria-label="Guica"><a href="#inicio" data-seccion="inicio">Quiénes somos</a><a href="#metodo" data-seccion="metodo">Cómo trabajamos</a><a href="#calidad" data-seccion="calidad">Calidad</a><a href="#contacto" data-seccion="contacto">Contacto</a></nav>
+    </div>
+  </div>
+  <header class="cab" data-cab>
+    <div class="cab__fila">
+      <button class="cab__boton cab__menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <a class="cab__logo" href="#inicio" aria-label="Guica, inicio"><img src="assets/marca/logos/guica.png" alt="Guica, S.A. Productos Químicos" width="600" height="282"></a>
+      <nav class="nav" aria-label="Tienda">
+        <ul class="nav__lista">
+          <li class="nav__item"><a href="catalogo.html">Tienda</a></li>
+          <li class="nav__item"><a href="catalogo/hosteleria.html">Hostelería</a>
+          <div class="mega" role="region" aria-label="Hostelería">
+          <div class="container mega__in">
+            <div class="mega__col">
+              <p class="mega__t">Hostelería · 152 productos</p>
+              <ul><li><a href="catalogo/hosteleria.html?uso=suelos-y-superficies">Suelos y superficies</a></li><li><a href="catalogo/hosteleria.html?uso=ambientadores">Ambientadores</a></li><li><a href="catalogo/hosteleria.html?uso=complementos">Complementos</a></li><li><a href="catalogo/hosteleria.html?uso=desengrasantes">Desengrasantes</a></li><li><a href="catalogo/hosteleria.html?uso=bactericidas-y-desinfectantes">Bactericidas y desinfectantes</a></li><li><a href="catalogo/hosteleria.html?uso=lavado-de-vajilla-a-maquina">Lavado de vajilla a máquina</a></li><li><a href="catalogo/hosteleria.html?uso=lavavajillas-a-mano">Lavavajillas a mano</a></li><li><a href="catalogo/hosteleria.html?uso=celulosa">Celulosa</a></li>
+                <li><a class="mega__todo" href="catalogo/hosteleria.html">Ver los 152 productos</a></li></ul>
+            </div>
+            <div class="mega__col">
+              <p class="mega__t">Destacados</p>
+              <div class="mega__prods"><a class="mega__prod" href="producto/bacteriol-3-0-h-a.html"><span><img src="assets/img/productos/sm/c00343ha-5.webp" alt="" loading="lazy"></span>Bacteriol 3.0 -H.A.-</a><a class="mega__prod" href="producto/bacteriol-sd-h-a.html"><span><img src="assets/img/productos/sm/d00007ha-5.webp" alt="" loading="lazy"></span>Bacteriol SD -H.A.-</a><a class="mega__prod" href="producto/bioalcohol-fresh.html"><span><img src="assets/img/productos/sm/c00068-5.webp" alt="" loading="lazy"></span>Bioalcohol Fresh</a></div>
+            </div>
+            <a class="mega__img" href="catalogo/hosteleria.html"><img src="assets/img/escenas/sm/plancha-limpio.webp" alt="" loading="lazy"><strong><small>Todo para</small>Hostelería</strong></a>
+          </div>
+        </div></li>
+          <li class="nav__item"><a href="catalogo/automocion-y-transporte.html">Automoción</a>
+          <div class="mega" role="region" aria-label="Automoción y transporte">
+          <div class="container mega__in">
+            <div class="mega__col">
+              <p class="mega__t">Automoción y transporte · 61 productos</p>
+              <ul><li><a href="catalogo/automocion-y-transporte.html?uso=lavado-de-carrocerias">Lavado de carrocerías</a></li><li><a href="catalogo/automocion-y-transporte.html?uso=anticongelantes-y-refrigerantes">Anticongelantes y refrigerantes</a></li><li><a href="catalogo/automocion-y-transporte.html?uso=detergentes">Detergentes</a></li><li><a href="catalogo/automocion-y-transporte.html?uso=llantas">Llantas</a></li><li><a href="catalogo/automocion-y-transporte.html?uso=plasticos-y-aluminio">Plásticos y aluminio</a></li><li><a href="catalogo/automocion-y-transporte.html?uso=eliminadores-de-residuos">Eliminadores de residuos</a></li><li><a href="catalogo/automocion-y-transporte.html?uso=interiores">Interiores</a></li><li><a href="catalogo/automocion-y-transporte.html?uso=lavaparabrisas">Lavaparabrisas</a></li>
+                <li><a class="mega__todo" href="catalogo/automocion-y-transporte.html">Ver los 61 productos</a></li></ul>
+            </div>
+            <div class="mega__col">
+              <p class="mega__t">Destacados</p>
+              <div class="mega__prods"><a class="mega__prod" href="producto/deca-0611.html"><span><img src="assets/img/productos/sm/b00003-5.webp" alt="" loading="lazy"></span>Deca 0611</a><a class="mega__prod" href="producto/dkn-0611.html"><span><img src="assets/img/productos/sm/b00003n-5.webp" alt="" loading="lazy"></span>DKN-0611</a><a class="mega__prod" href="producto/energex-sr.html"><span><img src="assets/img/productos/sm/g00002-5.webp" alt="" loading="lazy"></span>Energex SR</a></div>
+            </div>
+            <a class="mega__img" href="catalogo/automocion-y-transporte.html"><img src="assets/img/escenas/sm/camion-limpio.webp" alt="" loading="lazy"><strong><small>Todo para</small>Automoción y transporte</strong></a>
+          </div>
+        </div></li>
+          <li class="nav__item"><a href="catalogo/industria.html">Industria</a>
+          <div class="mega" role="region" aria-label="Industria">
+          <div class="container mega__in">
+            <div class="mega__col">
+              <p class="mega__t">Industria · 24 productos</p>
+              <ul><li><a href="catalogo/industria.html?uso=detergentes-alcalinos">Detergentes alcalinos</a></li><li><a href="catalogo/industria.html?uso=disolventes">Disolventes</a></li><li><a href="catalogo/industria.html?uso=detergentes-acidos">Detergentes ácidos</a></li><li><a href="catalogo/industria.html?uso=aflojatodos-y-desbloqueantes">Aflojatodos y desbloqueantes</a></li><li><a href="catalogo/industria.html?uso=desengrasantes-para-fregadoras">Desengrasantes para fregadoras</a></li><li><a href="catalogo/industria.html?uso=limpieza-de-manos">Limpieza de manos</a></li><li><a href="catalogo/industria.html?uso=ultrasonidos">Ultrasonidos</a></li><li><a href="catalogo/industria.html?uso=desengrasantes-dielectricos">Desengrasantes dieléctricos</a></li>
+                <li><a class="mega__todo" href="catalogo/industria.html">Ver los 24 productos</a></li></ul>
+            </div>
+            <div class="mega__col">
+              <p class="mega__t">Destacados</p>
+              <div class="mega__prods"><a class="mega__prod" href="producto/deca-0150.html"><span><img src="assets/img/productos/sm/ac0040b-5.webp" alt="" loading="lazy"></span>Deca 0150</a><a class="mega__prod" href="producto/guic-0721.html"><span><img src="assets/img/productos/sm/c00022-5.webp" alt="" loading="lazy"></span>Guic 0721</a><a class="mega__prod" href="producto/guic-0725.html"><span><img src="assets/img/productos/sm/c00038-5.webp" alt="" loading="lazy"></span>Guic 0725</a></div>
+            </div>
+            <a class="mega__img" href="catalogo/industria.html"><img src="assets/img/escenas/sm/engranaje-limpio.webp" alt="" loading="lazy"><strong><small>Todo para</small>Industria</strong></a>
+          </div>
+        </div></li>
+          <li class="nav__item"><a href="catalogo/lavanderia.html">Lavandería</a>
+          <div class="mega" role="region" aria-label="Lavandería">
+          <div class="container mega__in">
+            <div class="mega__col">
+              <p class="mega__t">Lavandería · 21 productos</p>
+              <ul><li><a href="catalogo/lavanderia.html?uso=blanqueantes">Blanqueantes</a></li><li><a href="catalogo/lavanderia.html?uso=suavizantes">Suavizantes</a></li><li><a href="catalogo/lavanderia.html?uso=detergentes-liquidos">Detergentes líquidos</a></li><li><a href="catalogo/lavanderia.html?uso=detergentes-solidos">Detergentes sólidos</a></li><li><a href="catalogo/lavanderia.html?uso=desengrasantes">Desengrasantes</a></li><li><a href="catalogo/lavanderia.html?uso=aditivos">Aditivos</a></li>
+                <li><a class="mega__todo" href="catalogo/lavanderia.html">Ver los 21 productos</a></li></ul>
+            </div>
+            <div class="mega__col">
+              <p class="mega__t">Destacados</p>
+              <div class="mega__prods"><a class="mega__prod" href="producto/detergente-liquido-marsella.html"><span><img src="assets/img/productos/sm/m00024-5.webp" alt="" loading="lazy"></span>Detergente Líquido Marsella</a><a class="mega__prod" href="producto/detergente-super.html"><span><img src="assets/img/productos/sm/m00014-5.webp" alt="" loading="lazy"></span>Detergente Súper</a><a class="mega__prod" href="producto/suavil.html"><span><img src="assets/img/productos/sm/m00015-5.webp" alt="" loading="lazy"></span>Suavil</a></div>
+            </div>
+            <a class="mega__img" href="catalogo/lavanderia.html"><img src="assets/img/escenas/sm/lavanderia.webp" alt="" loading="lazy"><strong><small>Todo para</small>Lavandería</strong></a>
+          </div>
+        </div></li>
+          <li class="nav__item"><a href="productos.html">Más <svg class="ico ico--sm" aria-hidden="true"><use href="#i-down"/></svg></a>
+          <div class="mega" role="region" aria-label="Más sectores">
+          <div class="container mega__in mega__in--fila">
+            <a class="mega__img" href="catalogo/agroalimentaria.html"><img src="assets/img/fotos/sm/agro.webp" alt="" loading="lazy"><strong><small>23 productos</small>Agroalimentaria</strong></a>
+            <a class="mega__img" href="catalogo/higiene.html"><img src="assets/img/fotos/sm/higiene.webp" alt="" loading="lazy"><strong><small>14 productos</small>Higiene</strong></a>
+            <a class="mega__img" href="catalogo/construccion.html"><img src="assets/img/escenas/sm/ladrillo-limpio.webp" alt="" loading="lazy"><strong><small>13 productos</small>Construcción</strong></a>
+            <a class="mega__img" href="catalogo/tratamiento-de-aguas.html"><img src="assets/img/fotos/sm/aguas.webp" alt="" loading="lazy"><strong><small>7 productos</small>Tratamiento de aguas</strong></a>
+            <a class="mega__img" href="catalogo/sistemas-de-dosificacion.html"><img src="assets/img/fotos/sm/dosificacion.webp" alt="" loading="lazy"><strong><small>2 productos</small>Sistemas de dosificación</strong></a>
+          </div>
+        </div></li>
+        </ul>
+      </nav>
+      <div class="cab__acciones">
+        <a class="cab__tel" href="tel:+34916761011" aria-label="Asesoramiento: 916 761 011"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span><small>Asesoramiento</small>916 761 011</span><b class="cab__tel-corto">Llamar</b></a>
+        <button class="cab__boton cab__buscar" type="button" data-abrir-busca aria-controls="busca" aria-expanded="false" aria-label="Buscar"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg><span>Buscar</span></button>
+        <button class="cab__boton cab__tema" type="button" data-tema-boton aria-label="Modo oscuro" title="Modo oscuro"><svg class="ico i-luna" aria-hidden="true"><use href="#i-luna"/></svg><svg class="ico i-sol" aria-hidden="true"><use href="#i-sol"/></svg></button>
+        <a class="cab__boton cab__cuenta" href="cuenta.html" data-cuenta-boton aria-label="Cuentas de cliente: próximamente"><svg class="ico" aria-hidden="true"><use href="#i-usuario"/></svg><span data-cuenta-nombre>Entrar</span><small class="cab__pronto">Pronto</small></a>
+        <button class="cab__boton cab__pedido" type="button" data-abrir-pedido aria-controls="hoja-pedido" aria-label="Mi pedido"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg><span>Mi pedido</span><span class="cuenta" data-pedido-n hidden>0</span></button>
+      </div>
+    </div>
+    <div class="busca" id="busca" data-busca-panel hidden>
+      <form class="container busca__form" action="productos.html" method="get" role="search" data-busca autocomplete="off">
+        <svg class="ico busca__lupa" aria-hidden="true"><use href="#i-search"/></svg>
+        <label class="sr" for="busca-q">Buscar productos</label>
+        <input id="busca-q" name="q" type="search" placeholder="Un producto o lo que tienes que limpiar" enterkeyhint="search" maxlength="80" aria-controls="busca-sug">
+        <button class="busca__cerrar" type="button" data-cerrar-busca aria-label="Cerrar la búsqueda"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button>
+        <div class="busca__res" id="busca-sug" data-sugerencias hidden></div>
+        <p class="busca__ideas"><span>Lo más buscado:</span><a href="productos.html?q=desengrasante">Desengrasante</a><a href="productos.html?q=lavavajillas">Lavavajillas</a><a href="productos.html?q=suelos">Suelos</a><a href="productos.html?q=manos">Manos</a><a href="productos.html?q=cemento">Cemento</a><a href="productos.html?q=anticongelante">Anticongelante</a></p>
+      </form>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__scrim" data-menu-close></div>
+    <div class="menu__sheet" role="dialog" aria-label="Sectores" data-lenis-prevent>
+      <span class="agarre" data-agarre aria-hidden="true"></span>
+      <div class="menu__head"><p class="menu__titulo">Compra por sector</p><button class="menu__close" type="button" aria-label="Cerrar menú" data-menu-close><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+      <nav class="menu__cats" aria-label="Sectores">
+        <a href="productos.html"><img src="assets/img/escenas/sm/plancha-limpio.webp" alt="" loading="lazy">Todos los productos <small>279</small></a>
+        <a href="catalogo/hosteleria.html"><img src="assets/img/escenas/sm/plancha-limpio.webp" alt="" loading="lazy">Hostelería <small>152</small></a>
+        <a href="catalogo/automocion-y-transporte.html"><img src="assets/img/escenas/sm/camion-limpio.webp" alt="" loading="lazy">Automoción y transporte <small>61</small></a>
+        <a href="catalogo/industria.html"><img src="assets/img/escenas/sm/engranaje-limpio.webp" alt="" loading="lazy">Industria <small>24</small></a>
+        <a href="catalogo/agroalimentaria.html"><img src="assets/img/fotos/sm/agro.webp" alt="" loading="lazy">Agroalimentaria <small>23</small></a>
+        <a href="catalogo/lavanderia.html"><img src="assets/img/escenas/sm/lavanderia.webp" alt="" loading="lazy">Lavandería <small>21</small></a>
+        <a href="catalogo/higiene.html"><img src="assets/img/fotos/sm/higiene.webp" alt="" loading="lazy">Higiene <small>14</small></a>
+        <a href="catalogo/construccion.html"><img src="assets/img/escenas/sm/ladrillo-limpio.webp" alt="" loading="lazy">Construcción <small>13</small></a>
+        <a href="catalogo/tratamiento-de-aguas.html"><img src="assets/img/fotos/sm/aguas.webp" alt="" loading="lazy">Tratamiento de aguas <small>7</small></a>
+        <a href="catalogo/sistemas-de-dosificacion.html"><img src="assets/img/fotos/sm/dosificacion.webp" alt="" loading="lazy">Sistemas de dosificación <small>2</small></a>
+      </nav>
+      <a class="boton boton--azul boton--bloque" href="tel:+34916761011"><svg class="ico ico--sm" aria-hidden="true"><use href="#i-phone"/></svg> Asesoramiento: 916 761 011</a>
+      <nav class="menu__web" aria-label="Guica"><a href="#inicio" data-menu-close>Quiénes somos</a><a href="#metodo" data-menu-close>Cómo trabajamos</a><a href="#calidad" data-menu-close>Calidad</a><a href="#contacto" data-menu-close>Contacto</a><a href="cuenta.html">Mi cuenta</a><a href="legal.html#privacidad">Privacidad</a></nav>
+    </div>
+  </div>
+  <!-- /comun:cabecera -->
+
+  <main id="contenido">
+
+    <!-- ============ Portada: la marca, no un producto ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero__in">
+        <p class="kicker hero__kicker" data-hero>Guica <i>·</i> Madrid, desde 1979</p>
+
+        <!-- Eslogan tal cual. «MÁS» va relleno de fotos de la nave, una por fase del recorrido -->
+        <h1 class="hero__title">
+          <span class="h-algo">Algo</span>
+          <span class="mas" aria-hidden="true">
+            <span class="mas__capa is-on" data-fase="0" style="background-image: url(assets/img/nave/sm/lab-estanteria-sel.webp)" data-img-l="assets/img/nave/lab-estanteria-sel.webp">MÁS</span>
+            <span class="mas__capa" data-fase="1" style="background-image: url(assets/img/nave/sm/fab-cubas-sel.webp)" data-img-l="assets/img/nave/fab-cubas-sel.webp">MÁS</span>
+            <span class="mas__capa" data-fase="2" style="background-image: url(assets/img/nave/sm/env-llenadora-sel.webp)" data-img-l="assets/img/nave/env-llenadora-sel.webp">MÁS</span>
+            <span class="mas__capa" data-fase="3" style="background-image: url(assets/img/nave/sm/alm-bidones-sel.webp)" data-img-l="assets/img/nave/alm-bidones-sel.webp">MÁS</span>
+          </span>
+          <span class="sr">más</span>
+          <span class="h-resto"><span class="h-que">que fabricantes de</span> <span class="h-pq">productos químicos.</span></span>
+        </h1>
+
+        <div class="hero__pie">
+          <ol class="fases" data-hero aria-label="Lo que hacemos">
+            <li class="is-on" data-fase="0"><b>01</b>Formulamos</li>
+            <li data-fase="1"><b>02</b>Fabricamos</li>
+            <li data-fase="2"><b>03</b>Envasamos</li>
+            <li data-fase="3"><b>04</b>Servimos</li>
+          </ol>
+          <div class="hero__texto">
+            <p class="hero__lead" data-hero>Desde 1979 formulamos, fabricamos y envasamos en Madrid química profesional para hostelería, industria, automoción, lavandería y cinco sectores más.</p>
+            <div class="hero__cta" data-hero>
+              <a class="btn btn--primary" href="#sectores">¿Qué necesitas limpiar? <svg class="ico ico--sm"><use href="#i-abajo"/></svg></a>
+              <a class="btn btn--line" href="catalogo.html">Ver la tienda <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vaho: la portada se limpia de una pasada al cargar -->
+      <div class="hero__vaho" aria-hidden="true"><i class="hero__escobilla"></i><div class="destellos"></div></div>
+
+      <!-- Tira de la nave: fotos propias en blanco y negro con el producto en azul Guica (herramientas/guica-azul-selectivo.py) -->
+      <div class="tira" aria-label="Nuestra fábrica en San Fernando de Henares">
+        <div class="tira__pista">
+          <figure class="tira__foto tira__foto--a"><img src="assets/img/nave/sm/lab-agitadores-sel.webp" alt="Laboratorio de Guica con agitadores y muestras" width="900" height="600" loading="lazy"><figcaption>Laboratorio</figcaption></figure>
+          <figure class="tira__foto tira__foto--b"><img src="assets/img/nave/sm/fab-cuba-verde-sel.webp" alt="Cuba de fabricación con producto verde" width="900" height="600" loading="lazy"><figcaption>Fabricación</figcaption></figure>
+          <figure class="tira__foto tira__foto--c"><img src="assets/img/nave/sm/lab-vaso-azul-sel.webp" alt="Vaso de precipitados con líquido azul sobre un agitador" width="600" height="900" loading="lazy"><figcaption>Control de calidad</figcaption></figure>
+          <figure class="tira__foto tira__foto--a"><img src="assets/img/nave/sm/env-linea-sel.webp" alt="Línea de envasado y etiquetado de garrafas" width="900" height="600" loading="lazy"><figcaption>Envasado</figcaption></figure>
+          <figure class="tira__foto tira__foto--b"><img src="assets/img/nave/sm/fachada-escorzo-sel.webp" alt="Fachada de la nave de Guica con el rótulo" width="900" height="600" loading="lazy"><figcaption>San Fernando de Henares</figcaption></figure>
+          <figure class="tira__foto tira__foto--c"><img src="assets/img/nave/sm/alm-carretilla-sel.webp" alt="Carretilla elevadora en el almacén" width="600" height="900" loading="lazy"><figcaption>Almacén</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ¿Qué necesitas? Índice de sectores ============ -->
+    <section class="section sectores" id="sectores">
+      <div class="container">
+        <header class="head" data-reveal>
+          <p class="kicker">¿Qué necesitas limpiar?</p>
+          <h2 class="titulo"><span class="t-navy">Elige</span> <span class="t-azul">tu sector.</span></h2>
+          <p class="head__lead">Toca tu sector y te enseñamos lo que fabricamos para él. Si dudas, te asesoramos por teléfono.</p>
+        </header>
+
+        <!-- Cada fila es un botón que abre su sector. El sello lleva el nº de productos en catálogo (exportación del 6-oct-2026) -->
+        <!-- Mosaico de sectores: el tamaño de cada pieza sigue a los productos que hay para él (exportación del 6-oct-2026).
+             Fotos en color, algo apagadas en reposo; al pasar por encima se avivan y se acercan.
+             Al tocar una pieza se abre su ficha en el panel lateral; las que llevan data-espacio abren su espacio 3D
+             (src/espacio/, se carga aparte en assets/js/espacio.js) y, si no hay WebGL, la ficha. -->
+        <div class="mosaico">
+          <button class="tesela tesela--grande" type="button" data-sector="s-ho" data-espacio="hosteleria" aria-haspopup="dialog" aria-controls="panel-sector">
+            <span class="tesela__3d" hidden>Entra en la cocina</span>
+            <span class="tesela__media"><img class="tesela__foto" src="assets/img/fotos/sm/hosteleria.webp" alt="" width="900" height="600" loading="lazy"></span>
+            <span class="tesela__etq"><span class="tesela__txt"><b class="tesela__nombre">Hostelería</b><span class="tesela__n"><b data-count="152">152</b> productos</span></span><svg class="ico tesela__ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="tesela tesela--ancha" type="button" data-sector="s-au" data-espacio="automocion-y-transporte" data-sitio="el lavadero" aria-haspopup="dialog" aria-controls="panel-sector">
+            <span class="tesela__3d" hidden>Entra en 3D</span>
+            <span class="tesela__media"><img class="tesela__foto" src="assets/img/fotos/sm/automocion.webp" alt="" width="900" height="900" loading="lazy"></span>
+            <span class="tesela__etq"><span class="tesela__txt"><b class="tesela__nombre">Automoción</b><span class="tesela__n"><b data-count="61">61</b> productos</span></span><svg class="ico tesela__ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="tesela tesela--ancha" type="button" data-sector="s-in" data-espacio="industria" data-sitio="la nave" aria-haspopup="dialog" aria-controls="panel-sector">
+            <span class="tesela__3d" hidden>Entra en 3D</span>
+            <span class="tesela__media"><img class="tesela__foto" src="assets/img/fotos/sm/industria.webp" alt="" width="900" height="600" loading="lazy"></span>
+            <span class="tesela__etq"><span class="tesela__txt"><b class="tesela__nombre">Industria</b><span class="tesela__n"><b data-count="24">24</b> productos</span></span><svg class="ico tesela__ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="tesela " type="button" data-sector="s-ag" data-espacio="agroalimentaria" data-sitio="la quesería" aria-haspopup="dialog" aria-controls="panel-sector">
+            <span class="tesela__3d" hidden>Entra en 3D</span>
+            <span class="tesela__media"><img class="tesela__foto" src="assets/img/fotos/sm/agro.webp" alt="" width="900" height="600" loading="lazy"></span>
+            <span class="tesela__etq"><span class="tesela__txt"><b class="tesela__nombre">Agroalimentaria</b><span class="tesela__n"><b data-count="23">23</b> productos</span></span><svg class="ico tesela__ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="tesela tesela--ancha" type="button" data-sector="s-la" data-espacio="lavanderia" data-sitio="la lavandería" aria-haspopup="dialog" aria-controls="panel-sector">
+            <span class="tesela__3d" hidden>Entra en 3D</span>
+            <span class="tesela__media"><img class="tesela__foto" src="assets/img/fotos/sm/lavanderia.webp" alt="" width="900" height="600" loading="lazy"></span>
+            <span class="tesela__etq"><span class="tesela__txt"><b class="tesela__nombre">Lavandería</b><span class="tesela__n"><b data-count="21">21</b> productos</span></span><svg class="ico tesela__ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="tesela " type="button" data-sector="s-hi" data-espacio="higiene" data-sitio="los vestuarios" aria-haspopup="dialog" aria-controls="panel-sector">
+            <span class="tesela__3d" hidden>Entra en 3D</span>
+            <span class="tesela__media"><img class="tesela__foto" src="assets/img/fotos/sm/higiene.webp" alt="" width="900" height="675" loading="lazy"></span>
+            <span class="tesela__etq"><span class="tesela__txt"><b class="tesela__nombre">Higiene</b><span class="tesela__n"><b data-count="14">14</b> productos</span></span><svg class="ico tesela__ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="tesela " type="button" data-sector="s-co" data-espacio="construccion" data-sitio="la nave de prefabricados" aria-haspopup="dialog" aria-controls="panel-sector">
+            <span class="tesela__3d" hidden>Entra en 3D</span>
+            <span class="tesela__media"><img class="tesela__foto" src="assets/img/fotos/sm/construccion.webp" alt="" width="900" height="676" loading="lazy"></span>
+            <span class="tesela__etq"><span class="tesela__txt"><b class="tesela__nombre">Construcción</b><span class="tesela__n"><b data-count="13">13</b> productos</span></span><svg class="ico tesela__ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="tesela " type="button" data-sector="s-ta" data-espacio="tratamiento-de-aguas" data-sitio="el cuarto de instalaciones" aria-haspopup="dialog" aria-controls="panel-sector">
+            <span class="tesela__3d" hidden>Entra en 3D</span>
+            <span class="tesela__media"><img class="tesela__foto" src="assets/img/fotos/sm/aguas.webp" alt="" width="900" height="675" loading="lazy"></span>
+            <span class="tesela__etq"><span class="tesela__txt"><b class="tesela__nombre">Tratamiento de aguas</b><span class="tesela__n"><b data-count="7">7</b> productos</span></span><svg class="ico tesela__ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="tesela " type="button" data-sector="s-ds" data-espacio="sistemas-de-dosificacion" data-sitio="el cuarto del lavavajillas" aria-haspopup="dialog" aria-controls="panel-sector">
+            <span class="tesela__3d" hidden>Entra en 3D</span>
+            <span class="tesela__media"><img class="tesela__foto" src="assets/img/fotos/sm/dosificacion.webp" alt="" width="900" height="600" loading="lazy"></span>
+            <span class="tesela__etq"><span class="tesela__txt"><b class="tesela__nombre">Dosificación</b><span class="tesela__n"><b data-count="2">2</b> productos</span></span><svg class="ico tesela__ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </button>
+        </div>
+        <p class="mosaico__nota"><span class="mosaico__escala" aria-hidden="true"><i></i><i></i><i></i></span>Cuanto más grande, más productos tenemos para ese sector.</p>
+      </div>
+    </section>
+
+    <!-- ============ Así limpia: la química por dentro (sustituye al antes y después simulado) ============ -->
+    <section class="section quimica" id="quimica">
+      <div class="container">
+        <header class="head" data-reveal>
+          <p class="kicker">La química, por dentro</p>
+          <h2 class="titulo"><span class="t-navy">Así limpia</span> <span class="t-azul">una fórmula.</span></h2>
+          <p class="head__lead">Detrás de cada producto hay una molécula que hace el trabajo: el tensioactivo. Baja y míralo en cuatro pasos.</p>
+        </header>
+      </div>
+
+      <div class="quimica__escena">
+        <div class="container quimica__in">
+          <!-- Ilustración: superficie, mancha de grasa y moléculas de tensioactivo (cabeza azul, cola que agarra la grasa). La mueve GSAP con el scroll. -->
+          <figure class="quimica__visual" aria-hidden="true">
+            <!-- Partículas en WebGL (src/micela.js) y rótulos técnicos que siguen a las piezas -->
+            <canvas class="micela-gl"></canvas>
+            <div class="micela-hud">
+              <div class="rot rot--arriba" data-r="grasa">
+                <i class="rot__nodo"></i>
+                <svg class="rot__linea" overflow="visible"><polyline class="izq" points="0,0 -44,-58 -160,-58"/><polyline class="der" points="0,0 44,-58 160,-58"/></svg>
+                <span class="rot__txt"><b>Grasa</b>No se mezcla con el agua</span>
+              </div>
+              <div class="rot rot--arriba" data-r="molecula">
+                <i class="rot__nodo"></i>
+                <svg class="rot__linea" overflow="visible"><polyline class="izq" points="0,0 -36,-62 -170,-62"/><polyline class="der" points="0,0 36,-62 170,-62"/></svg>
+                <span class="rot__txt"><b>Tensioactivo</b>Cabeza hidrófila · cola lipófila</span>
+              </div>
+              <div class="rot rot--anillo" data-r="micela">
+                <i class="rot__anillo"></i>
+                <span class="rot__txt"><b>Micela</b>Ø ≈ 5 nm · grasa dentro</span>
+              </div>
+              <div class="rot rot--suelo" data-r="suelo">
+                <i class="rot__nodo"></i>
+                <svg class="rot__linea" overflow="visible"><polyline class="izq" points="0,0 26,-70 170,-70"/><polyline class="der" points="0,0 26,-70 170,-70"/></svg>
+                <span class="rot__txt"><b>Superficie limpia</b>Sin restos de grasa</span>
+              </div>
+            </div>
+          </figure>
+
+          <ol class="quimica__pasos">
+            <li class="qpaso is-on"><b>01</b><h3>La grasa se pega</h3><p>El agua sola resbala por encima: la grasa no se mezcla con ella y se queda agarrada a la superficie.</p></li>
+            <li class="qpaso"><b>02</b><h3>La molécula la agarra</h3><p>El tensioactivo tiene dos extremos: una cola que se clava en la grasa y una cabeza que prefiere el agua.</p></li>
+            <li class="qpaso"><b>03</b><h3>La rodea y la despega</h3><p>Cientos de moléculas encierran la mancha en una esfera, la micela, y la levantan de la superficie.</p></li>
+            <li class="qpaso"><b>04</b><h3>El agua se la lleva</h3><p>Con la grasa encerrada, el aclarado se la lleva entera. Formulamos cada producto para que esto pase con la dosis justa.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Cómo trabajamos: el «algo más» ============ -->
+    <section class="section metodo" id="metodo">
+      <div class="container">
+        <header class="head" data-reveal>
+          <p class="kicker">Algo más que fabricantes</p>
+          <h2 class="titulo"><span class="t-navy">De la fórmula</span> <span class="t-azul">a tu almacén.</span></h2>
+          <p class="head__lead">No somos una marca más de limpieza: formulamos, fabricamos y envasamos nosotros mismos, en nuestra planta de San Fernando de Henares.</p>
+        </header>
+      </div>
+
+      <!-- El líquido recorre la conducción de una estación a otra al hacer scroll -->
+      <div class="pasos">
+        <div class="pasos__pista">
+          <div class="pasos__tubo" aria-hidden="true"><i class="pasos__liq"></i></div>
+          <article class="paso">
+            <figure class="paso__ilus">
+            <svg class="r-est r-est--1" viewBox="0 0 400 300" overflow="visible" aria-hidden="true">
+              <g class="r-etq"><circle cx="18" cy="16" r="3" fill="#1D93D1"/><text x="28" y="20">I+D · LABORATORIO</text></g>
+              <defs><clipPath id="r-cp-matraz"><path d="M188 96V142L144 222Q140 230 150 230H250Q260 230 256 222L212 142V96Z"/></clipPath></defs>
+              <g class="r-tubo">
+                <path class="r-stub" d="M-36 280H200" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round" fill="none"/>
+                <path class="r-stub r-stub__liq" d="M-36 280H200" stroke="url(#r-liq)" stroke-width="6" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+                <path d="M200 280V262" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round" fill="none"/>
+                <path class="r-riser" d="M200 280V262" stroke="url(#r-liq)" stroke-width="6" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+              </g>
+              <path d="M40 266H360" stroke="#0B4F7C" stroke-width="1" stroke-dasharray="2 4" opacity=".45"/>
+              <!-- Agitador magnético -->
+              <rect x="128" y="232" width="144" height="30" rx="6" fill="url(#r-trama)" stroke="#0B4F7C" stroke-width="1.2"/>
+              <rect x="146" y="242" width="40" height="10" rx="2" fill="#0B4F7C" opacity=".85"/>
+              <circle cx="232" cy="247" r="6" fill="#fff" stroke="#0B4F7C" stroke-width="1.2"/><circle cx="252" cy="247" r="6" fill="#fff" stroke="#0B4F7C" stroke-width="1.2"/>
+              <!-- Matraz con líquido -->
+              <g clip-path="url(#r-cp-matraz)">
+                <rect x="130" y="96" width="140" height="140" fill="url(#r-trama-fina)"/>
+                <g class="r1-liq"><rect x="130" y="0" width="140" height="240" fill="url(#r-liq)"/><path class="r1-ola" d="M90 0Q110 -6 130 0T170 0T210 0T250 0T290 0T330 0V8H90Z" fill="#7FD0F7"/></g>
+                <rect class="r1-iman" x="186" y="221" width="28" height="6" rx="3" fill="#fff"/>
+                <g class="r1-burbujas"><circle cx="186" cy="214" r="3" fill="#fff" opacity=".7"/><circle cx="208" cy="206" r="2.2" fill="#fff" opacity=".7"/><circle cx="222" cy="216" r="2.6" fill="#fff" opacity=".7"/><circle cx="176" cy="200" r="2" fill="#fff" opacity=".7"/></g>
+              </g>
+              <path d="M188 96V142L144 222Q140 230 150 230H250Q260 230 256 222L212 142V96" fill="none" stroke="#0B4F7C" stroke-width="1.3" stroke-linejoin="round"/>
+              <rect x="182" y="88" width="36" height="10" rx="3" fill="#fff" stroke="#0B4F7C" stroke-width="1.3"/>
+              <path d="M160 214L178 182" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+              <!-- Pipeta y gota -->
+              <g class="r1-pipeta"><rect x="194" y="18" width="12" height="52" rx="4" fill="url(#r-trama-fina)" stroke="#0B4F7C" stroke-width="1.2"/><rect x="196" y="40" width="8" height="28" rx="3" fill="url(#r-liq)"/><path d="M196 70H204L201 80H199Z" fill="#0B4F7C"/></g>
+              <circle class="r1-gota" cx="200" cy="84" r="4" fill="#1D93D1"/>
+            </svg>
+            </figure>
+            <div class="paso__txt">
+              <span class="paso__n">01</span>
+              <h3>Formulamos</h3>
+              <p>En nuestro laboratorio desarrollamos cada fórmula y la ajustamos a lo que limpias, para recomendarte el producto y la dosis justa.</p>
+            </div>
+          </article>
+          <article class="paso">
+            <figure class="paso__ilus">
+            <svg class="r-est r-est--2" viewBox="0 0 400 300" overflow="visible" aria-hidden="true">
+              <g class="r-etq"><circle cx="18" cy="16" r="3" fill="#1D93D1"/><text x="28" y="20">CUBA · AGITACIÓN</text></g>
+              <defs><clipPath id="r-cp-cuba"><path d="M114 112H286V226Q286 250 262 250H138Q114 250 114 226Z"/></clipPath></defs>
+              <g class="r-tubo">
+                <path class="r-stub" d="M-36 280H200" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round" fill="none"/>
+                <path class="r-stub r-stub__liq" d="M-36 280H200" stroke="url(#r-liq)" stroke-width="6" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+                <path d="M200 280V250" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round" fill="none"/>
+                <path class="r-riser" d="M200 280V250" stroke="url(#r-liq)" stroke-width="6" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+              </g>
+              <path d="M40 266H360" stroke="#0B4F7C" stroke-width="1" stroke-dasharray="2 4" opacity=".45"/>
+              <!-- Patas -->
+              <path d="M132 246V264M268 246V264" stroke="#0B4F7C" stroke-width="1.6" stroke-linecap="round"/>
+              <!-- Cuba de acero con su líquido -->
+              <path d="M114 112H286V226Q286 250 262 250H138Q114 250 114 226Z" fill="url(#r-trama)" stroke="#0B4F7C" stroke-width="1.3"/>
+              <g clip-path="url(#r-cp-cuba)" opacity=".92">
+                <g class="r2-liq"><rect x="100" y="0" width="200" height="260" fill="url(#r-liq)"/><path class="r2-ola" d="M40 0Q65 -8 90 0T140 0T190 0T240 0T290 0T340 0T390 0V10H40Z" fill="#7FD0F7"/></g>
+              </g>
+              <!-- Mirilla de nivel -->
+              <rect x="258" y="128" width="12" height="104" rx="6" fill="#fff" stroke="#0B4F7C" stroke-width="1.2"/>
+              <rect class="r2-nivel" x="261" y="131" width="6" height="98" rx="3" fill="url(#r-liq)" transform-origin="264 229"/>
+              <path d="M128 132V226" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+              <ellipse cx="200" cy="112" rx="88" ry="10" fill="url(#r-trama-fina)" stroke="#0B4F7C" stroke-width="1.3"/>
+              <!-- Agitador -->
+              <rect x="180" y="52" width="40" height="40" rx="5" fill="#0B4F7C"/>
+              <rect x="186" y="60" width="28" height="4" rx="2" fill="#1D93D1"/>
+              <rect x="196" y="92" width="8" height="10" fill="#0B4F7C"/>
+              <path d="M200 102V214" stroke="#0B4F7C" stroke-width="1.6"/>
+              <g class="r2-aspas" transform-origin="200 214"><path d="M200 214L166 206L168 220Z M200 214L234 206L232 220Z" fill="#6F8796"/></g>
+            </svg>
+            </figure>
+            <div class="paso__txt">
+              <span class="paso__n">02</span>
+              <h3>Fabricamos</h3>
+              <p>Lo fabricamos en nuestras cubas, con materias primas de proveedores homologados y trazabilidad de cada lote.</p>
+            </div>
+          </article>
+          <article class="paso">
+            <figure class="paso__ilus">
+            <svg class="r-est r-est--3" viewBox="0 0 400 300" overflow="visible" aria-hidden="true">
+              <g class="r-etq"><circle cx="18" cy="16" r="3" fill="#1D93D1"/><text x="28" y="20">LLENADO · 5 · 10 · 25 L</text></g>
+              <defs><clipPath id="r-cp-garrafa"><path d="M156 262H244Q250 262 250 256V162Q250 152 240 148L222 142V134H206V142H176Q156 142 156 162Z"/></clipPath></defs>
+              <g class="r-tubo">
+                <path class="r-stub" d="M-36 280H330" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round" fill="none"/>
+                <path class="r-stub r-stub__liq" d="M-36 280H330" stroke="url(#r-liq)" stroke-width="6" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+                <path d="M330 280V51" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round" fill="none"/>
+                <path class="r-riser" d="M330 280V51" stroke="url(#r-liq)" stroke-width="6" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+              </g>
+              <path d="M40 266H360" stroke="#0B4F7C" stroke-width="1" stroke-dasharray="2 4" opacity=".45"/>
+              <!-- Llenadora: viga, conducto desde la tubería y boquilla -->
+              <path d="M330 51H300" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round"/>
+              <rect x="96" y="40" width="210" height="22" rx="5" fill="url(#r-trama)" stroke="#0B4F7C" stroke-width="1.2"/>
+              <rect x="104" y="46" width="34" height="10" rx="2" fill="#0B4F7C" opacity=".85"/>
+              <rect x="207" y="62" width="14" height="40" rx="3" fill="url(#r-trama)" stroke="#0B4F7C" stroke-width="1.2"/>
+              <rect class="r3-chorro" x="211" y="102" width="6" height="34" rx="3" fill="url(#r-liq)" transform-origin="214 102"/>
+              <!-- Cinta transportadora -->
+              <rect x="60" y="262" width="290" height="10" rx="5" fill="#0B4F7C"/>
+              <g fill="#FBFCFD" stroke="#0B4F7C" stroke-width="1.2"><circle cx="82" cy="267" r="4"/><circle cx="142" cy="267" r="4"/><circle cx="202" cy="267" r="4"/><circle cx="262" cy="267" r="4"/><circle cx="322" cy="267" r="4"/></g>
+              <!-- Garrafa (HDPE translúcido) que se llena -->
+              <g class="r3-garrafa">
+                <path d="M156 262H244Q250 262 250 256V162Q250 152 240 148L222 142V134H206V142H176Q156 142 156 162Z" fill="url(#r-trama-fina)"/>
+                <g clip-path="url(#r-cp-garrafa)"><rect class="r3-liq" x="150" y="0" width="110" height="280" fill="url(#r-liq)" opacity=".55"/></g>
+                <path d="M156 262H244Q250 262 250 256V162Q250 152 240 148L222 142V134H206V142H176Q156 142 156 162Z" fill="none" stroke="#0B4F7C" stroke-width="1.3" stroke-linejoin="round"/>
+                <rect x="166" y="150" width="30" height="10" rx="5" fill="#FBFCFD" stroke="#0B4F7C" stroke-width="1.2"/>
+                <rect x="172" y="196" width="56" height="30" rx="2" fill="#fff" stroke="#DCE5EB"/>
+                <rect x="178" y="205" width="44" height="5" rx="2.5" fill="#0B4F7C"/><rect x="178" y="214" width="28" height="4" rx="2" fill="#1D93D1"/>
+                <rect class="r3-tapon" x="203" y="122" width="22" height="13" rx="2.5" fill="#1D93D1"/>
+              </g>
+            </svg>
+            </figure>
+            <div class="paso__txt">
+              <span class="paso__n">03</span>
+              <h3>Envasamos</h3>
+              <p>En nuestra propia línea llenamos garrafas de 5, 10 y 25 litros, sacos y otros envases bajo pedido.</p>
+            </div>
+          </article>
+          <article class="paso">
+            <figure class="paso__ilus">
+            <svg class="r-est r-est--4" viewBox="0 0 400 300" overflow="visible" aria-hidden="true">
+              <g class="r-etq"><circle cx="18" cy="16" r="3" fill="#1D93D1"/><text x="28" y="20">PALÉ · LISTO PARA SALIR</text></g>
+              <g class="r-tubo">
+                <path class="r-stub" d="M-36 280H70" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round" fill="none"/>
+                <path class="r-stub r-stub__liq" d="M-36 280H70" stroke="url(#r-liq)" stroke-width="6" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+                <path d="M70 280V262" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round" fill="none"/>
+                <path class="r-riser" d="M70 280V262" stroke="url(#r-liq)" stroke-width="6" stroke-linecap="round" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+              </g>
+              <path d="M40 266H360" stroke="#0B4F7C" stroke-width="1" stroke-dasharray="2 4" opacity=".45"/>
+              <!-- Palé -->
+              <rect x="104" y="250" width="192" height="8" rx="2" fill="url(#r-trama)" stroke="#0B4F7C" stroke-width="1.2"/>
+              <g fill="url(#r-trama)" stroke="#0B4F7C" stroke-width="1"><rect x="108" y="258" width="22" height="10"/><rect x="189" y="258" width="22" height="10"/><rect x="270" y="258" width="22" height="10"/></g>
+              <rect x="104" y="266" width="192" height="6" rx="2" fill="url(#r-trama)" stroke="#0B4F7C" stroke-width="1.2"/>
+              <!-- Garrafas que se apilan (abajo y arriba) -->
+              <g class="r4-pila">
+                <use class="r4-g" href="#r-garrafa-mini" x="110" y="172" width="58" height="78"/>
+                <use class="r4-g" href="#r-garrafa-mini" x="171" y="172" width="58" height="78"/>
+                <use class="r4-g" href="#r-garrafa-mini" x="232" y="172" width="58" height="78"/>
+                <use class="r4-g" href="#r-garrafa-mini" x="140" y="90" width="58" height="78"/>
+                <use class="r4-g" href="#r-garrafa-mini" x="201" y="90" width="58" height="78"/>
+              </g>
+              <!-- Flejes -->
+              <rect class="r4-fleje" x="148" y="84" width="5" height="168" rx="2" fill="#0B4F7C" transform-origin="150 252"/>
+              <rect class="r4-fleje" x="247" y="84" width="5" height="168" rx="2" fill="#0B4F7C" transform-origin="250 252"/>
+              <!-- Listo -->
+              <g class="r4-ok" transform-origin="318 96"><circle cx="318" cy="96" r="18" fill="#1D93D1"/><path d="M309 96L316 103L328 90" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+            </svg>
+            </figure>
+            <div class="paso__txt">
+              <span class="paso__n">04</span>
+              <h3>Servimos</h3>
+              <p>Preparamos tu pedido en nuestro almacén y seguimos a tu lado después, por teléfono, para lo que necesites.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Calidad ============ -->
+    <section class="section calidad" id="calidad">
+      <div class="container">
+        <div class="calidad__top" data-reveal>
+          <p class="kicker">Calidad certificada <i>·</i> desde 1979</p>
+          <p class="anios">
+            <!-- La cifra va rellena de la foto del rótulo de la nave -->
+            <b class="anios__n" data-years style="background-image: url(assets/img/nave/sm/fachada-rotulo-duo.webp)">47</b>
+            <span class="titulo"><span class="t-navy">años de</span> <span class="t-azul">química profesional.</span></span>
+          </p>
+          <div class="timeline" aria-hidden="true">
+            <div class="timeline__bar"><i class="timeline__fill"></i><b class="timeline__dot"></b><b class="timeline__dot timeline__dot--now"></b></div>
+            <div class="timeline__labels"><span>1979</span><span data-year-now>2026</span></div>
+          </div>
+        </div>
+
+        <dl class="etiqueta etiqueta--calidad" data-reveal>
+          <div>
+            <dt>ISO 9001 · Calidad</dt>
+            <dd><img class="sello-iso" src="assets/img/sellos/oclem-iso-9001.webp" alt="Sello OCLEM Certificación: Calidad ISO 9001, empresa certificada" width="358" height="500" loading="lazy"><span>Certificado por OCLEM<br><small>Nº OCSC-0101/24</small></span></dd>
+          </div>
+          <div>
+            <dt>ISO 14001 · Medio ambiente</dt>
+            <dd><img class="sello-iso" src="assets/img/sellos/oclem-iso-14001.webp" alt="Sello OCLEM Certificación: Gestión ambiental ISO 14001, empresa certificada" width="360" height="500" loading="lazy"><span>Certificado por OCLEM<br><small>Nº OCSGA-0206/18</small></span></dd>
+          </div>
+          <div>
+            <dt>Trazabilidad total</dt>
+            <dd class="dd--lista"><span>Proveedores homologados, equipos calibrados y seguimiento de cada lote.</span><a class="btn btn--text btn--xs" href="assets/docs/politica-calidad-medio-ambiente-2024.pdf" target="_blank" rel="noopener"><svg class="ico ico--sm"><use href="#i-doc"/></svg> Política de calidad (PDF)</a></dd>
+          </div>
+          <div>
+            <dt>Opiniones en Google</dt>
+            <dd class="dd--rating"><b>4,7</b><span class="stars" aria-label="4,7 de 5 estrellas"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico ico--half"><use href="#i-star"/></svg></span><small>11 reseñas · «Muy buena empresa y productos.»</small></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ Contacto ============ -->
+    <section class="section contacto" id="contacto">
+      <figure class="fachada">
+        <img src="assets/img/nave/sm/fachada-completa.webp" srcset="assets/img/nave/sm/fachada-completa.webp 900w, assets/img/nave/fachada-completa.webp 1800w" sizes="100vw" alt="Fachada de la fábrica de Guica en San Fernando de Henares" width="900" height="600" loading="lazy">
+      </figure>
+      <div class="container contacto__grid">
+        <div class="contacto__info" data-reveal>
+          <p class="kicker">Contacto</p>
+          <h2 class="titulo"><span class="t-navy">¿Hablamos?</span></h2>
+          <p class="head__lead">Cuéntanos qué necesitas limpiar y te recomendamos el producto y el formato. Y si prefieres verlo, ven a la fábrica.</p>
+          <a class="tel" href="tel:+34916761011">916 761 011</a>
+          <div class="contacto__cta">
+            <a class="btn btn--primary" href="tel:+34916761011"><svg class="ico ico--sm"><use href="#i-phone"/></svg> Llamar ahora</a>
+          </div>
+          <p class="hours"><svg class="ico ico--sm"><use href="#i-clock"/></svg><span>Lunes a jueves, de 8:00 a 17:30 · Viernes, de 8:00 a 15:00</span></p>
+          <p class="hours"><svg class="ico ico--sm"><use href="#i-pin"/></svg><span><address>Av. de la Astronomía, 17 · Pol. Ind. nº III<br>28830 San Fernando de Henares (Madrid)</address><a class="btn btn--text" href="https://www.google.com/maps/search/?api=1&amp;query=Guica%20S.A.%20Avenida%20de%20la%20Astronom%C3%ADa%2017%20San%20Fernando%20de%20Henares" target="_blank" rel="noopener">Cómo llegar <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a></span></p>
+        </div>
+
+        <form class="form" id="consulta" data-reveal novalidate>
+          <p class="kicker">Pide asesoramiento</p>
+          <!-- Antispam: «web» no lo ven las personas (si llega relleno es un robot) y «t» es la hora de carga -->
+          <div class="trampa" aria-hidden="true"><label>No rellenar <input name="web" tabindex="-1" autocomplete="off"></label></div>
+          <input type="hidden" name="t" value="">
+          <label class="field">
+            <span>Sector</span>
+            <select name="sector" id="f-sector">
+              <option>Hostelería</option><option>Automoción y transporte</option><option>Industria</option><option>Agroalimentaria</option><option>Lavandería</option><option>Higiene</option><option>Construcción</option><option>Tratamiento de aguas</option><option>Sistemas de dosificación</option><option>Otro / no lo sé</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>¿Qué necesitas?</span>
+            <textarea name="mensaje" rows="3" required placeholder="Ej.: desengrasante para la plancha de la cocina, unos 25 L al mes"></textarea>
+          </label>
+          <div class="field-row">
+            <label class="field"><span>Nombre y empresa</span><input name="nombre" autocomplete="name" required></label>
+            <label class="field"><span>Teléfono o email</span><input name="contacto" autocomplete="tel" required></label>
+          </div>
+          <label class="check"><input type="checkbox" name="privacidad" value="1" required><span>Acepto que Guica use estos datos solo para responder a mi consulta (<a href="legal.html#privacidad" target="_blank">política de privacidad</a>).</span></label>
+          <button class="btn btn--primary btn--block" type="submit">Enviar consulta <svg class="ico ico--sm"><use href="#i-arrow"/></svg></button>
+          <p class="form__msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- comun:pie -->
+  <footer class="pie">
+    <div class="container">
+      <p class="pie__lema"><span>Algo más que fabricantes de</span> <span>productos químicos.</span></p>
+      <div class="pie__cols">
+        <div class="pie__marca">
+          <img src="assets/marca/logos/guica.png" alt="Guica" width="600" height="282" loading="lazy">
+          <p>Formulamos, fabricamos y envasamos química profesional en San Fernando de Henares (Madrid) desde 1979.</p>
+          <p class="pie__contacto">Av. de la Astronomía, 17 · 28830 San Fernando de Henares<br><a href="tel:+34916761011">916 761 011</a> · lunes a viernes</p>
+        </div>
+        <details class="pie__bloque" open data-pie-bloque><summary><h2>Tienda</h2><svg class="ico ico--sm" aria-hidden="true"><use href="#i-down"/></svg></summary><nav aria-label="Tienda"><ul><li><a href="productos.html">Todos los productos</a></li><li><a href="catalogo/hosteleria.html">Hostelería</a></li><li><a href="catalogo/automocion-y-transporte.html">Automoción y transporte</a></li><li><a href="catalogo/industria.html">Industria</a></li><li><a href="catalogo/agroalimentaria.html">Agroalimentaria</a></li><li><a href="catalogo/lavanderia.html">Lavandería</a></li><li><a href="catalogo/higiene.html">Higiene</a></li><li><a href="catalogo/construccion.html">Construcción</a></li><li><a href="catalogo/tratamiento-de-aguas.html">Tratamiento de aguas</a></li><li><a href="catalogo/sistemas-de-dosificacion.html">Sistemas de dosificación</a></li></ul></nav></details>
+        <details class="pie__bloque" open data-pie-bloque><summary><h2>Comprar con tranquilidad</h2><svg class="ico ico--sm" aria-hidden="true"><use href="#i-down"/></svg></summary><nav aria-label="Ayuda"><ul>
+          <li><a href="pedido.html">Mi pedido</a></li>
+          <li><a href="cuenta.html">Mi cuenta de cliente</a></li>
+          <li>Pides presupuesto sin compromiso: no se paga nada en la web.</li>
+          <li>Te respondemos por correo con precio, plazo y portes.</li>
+          <li>Fichas técnicas y de seguridad con cada producto.</li>
+          <li><a href="tel:+34916761011">Asesoramiento técnico: 916 761 011</a></li></ul></nav></details>
+        <details class="pie__bloque" open data-pie-bloque><summary><h2>Guica</h2><svg class="ico ico--sm" aria-hidden="true"><use href="#i-down"/></svg></summary><nav aria-label="Guica"><ul>
+          <li><a href="#inicio">Quiénes somos</a></li><li><a href="#metodo">Cómo trabajamos</a></li><li><a href="#calidad">Calidad y medio ambiente</a></li><li><a href="#contacto">Contacto</a></li><li><a href="legal.html#privacidad">Privacidad y tus datos</a></li></ul></nav></details>
+      </div>
+      <div class="pie__sellos">
+        <img src="assets/img/sellos/oclem-iso-9001.webp" alt="Certificado ISO 9001 de OCLEM" width="64" height="64" loading="lazy">
+        <img src="assets/img/sellos/oclem-iso-14001.webp" alt="Certificado ISO 14001 de OCLEM" width="64" height="64" loading="lazy">
+        <p>Calidad ISO 9001 y gestión ambiental ISO 14001 certificadas por OCLEM. Tus datos solo se usan para prepararte el presupuesto; la tienda no usa cookies de seguimiento ni pide datos de pago.</p>
+      </div>
+      <div class="pie__fila">
+        <a class="pie__grupo" href="https://gruposoto.net/" target="_blank" rel="noopener"><span>Una empresa de</span><img src="assets/marca/logos/gs-logo.png" alt="Grupo Soto" loading="lazy"></a>
+        <nav class="pie__redes" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/guica_sa/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a href="https://www.linkedin.com/company/guica-sa" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico" aria-hidden="true"><use href="#i-in"/></svg></a>
+          <a href="https://www.facebook.com/people/Guica-SA/61572225068929/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a>
+        </nav>
+        <p class="pie__legal">© <span data-year-now>2026</span> GUICA, S.A. · CIF A28595726 · <a href="legal.html#aviso-legal">Aviso legal</a> · <a href="legal.html#privacidad">Privacidad</a> · <a href="legal.html#cookies">Cookies</a> · <a href="legal.html#seguridad">Seguridad de la información</a> · <a href="ayudas.html">Ayudas y subvenciones</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="tabbar" aria-label="Guica">
+    <a class="tabbar__item" href="#inicio" aria-current="page"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg><span>Inicio</span></a>
+    <a class="tabbar__item" href="catalogo.html"><svg class="ico" aria-hidden="true"><use href="#i-tienda"/></svg><span>Tienda</span></a>
+    <button class="tabbar__item" type="button" data-abrir-menu aria-controls="menu"><svg class="ico" aria-hidden="true"><use href="#i-grid"/></svg><span>Sectores</span></button>
+    <button class="tabbar__item" type="button" data-abrir-busca aria-controls="busca" aria-expanded="false"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg><span>Buscar</span></button>
+    <button class="tabbar__item" type="button" data-abrir-pedido aria-controls="hoja-pedido"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg><span>Pedido</span><span class="cuenta" data-pedido-n hidden>0</span></button>
+  </nav>
+
+  <div class="hoja" id="hoja-pedido" aria-hidden="true">
+    <div class="hoja__velo" data-cerrar-pedido></div>
+    <aside class="hoja__panel" role="dialog" aria-modal="true" aria-labelledby="hoja-titulo">
+      <span class="agarre" data-agarre aria-hidden="true"></span>
+      <div class="hoja__cab">
+        <h2 class="hoja__titulo" id="hoja-titulo">Tu pedido <span data-pedido-n hidden>0</span></h2>
+        <button class="hoja__cerrar" type="button" data-cerrar-pedido aria-label="Cerrar el pedido"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <p class="hoja__aviso" data-aviso-anadido hidden><svg class="ico ico--sm" aria-hidden="true"><use href="#i-check"/></svg> <span></span></p>
+      <ul class="lineas" data-lineas data-lenis-prevent></ul>
+      <div class="hoja__vacia" data-vacio>
+        <svg class="ico" aria-hidden="true"><use href="#i-cesta"/></svg>
+        <p>Aún no has añadido nada. Elige tus productos y te enviamos el presupuesto sin compromiso.</p>
+        <a class="boton boton--linea" href="productos.html">Ver los 279 productos</a>
+      </div>
+      <div class="hoja__pie" data-lleno hidden>
+        <dl class="totales"><div><dt>Productos</dt><dd data-tot-lineas>0</dd></div><div><dt>Envases</dt><dd data-tot-envases>0</dd></div><div><dt>Precio, plazo y portes</dt><dd>Te los enviamos</dd></div></dl>
+        <a class="boton boton--azul boton--bloque" href="pedido.html">Pedir presupuesto <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="hoja__garantia"><svg class="ico" aria-hidden="true"><use href="#i-escudo"/></svg> Sin compromiso · No pagas nada en la web</p>
+        <button class="hoja__seguir" type="button" data-cerrar-pedido>Seguir comprando</button>
+      </div>
+    </aside>
+  </div>
+  <!-- /comun:pie -->
+
+  <!-- Panel con la ficha de cada sector (se abre desde el mosaico) -->
+  <div class="panel-sector" id="panel-sector" aria-hidden="true" data-lenis-prevent>
+    <div class="panel-sector__velo" data-cerrar></div>
+    <aside class="panel-sector__hoja" role="dialog" aria-modal="true" aria-label="Ficha del sector">
+      <div class="panel-sector__barra">
+        <span class="kicker panel-sector__cuenta"><b data-ps-i>1</b> / 9 · Sectores</span>
+        <button class="panel-sector__cerrar" type="button" data-cerrar aria-label="Cerrar la ficha"><svg class="ico"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="panel-sector__fichas">
+            <article class="ficha" id="s-ho" data-i="0" hidden>
+              <figure class="ficha__foto"><img src="assets/img/fotos/sm/hosteleria.webp" srcset="assets/img/fotos/sm/hosteleria.webp 900w, assets/img/fotos/hosteleria.webp 1800w" sizes="(min-width: 1024px) 560px, 100vw" alt="Cocina profesional de acero inoxidable" width="900" height="600" loading="lazy"></figure>
+              <div class="ficha__txt">
+                <p class="kicker">152 productos en catálogo</p>
+                <h3 class="ficha__titulo">Hostelería</h3>
+                <p class="sector__txt">Para cocinas, salas y habitaciones fabricamos lavavajillas, desengrasantes para planchas y hornos, productos para suelos y desinfectantes.</p>
+              <ul class="chips"><li>Lavado de vajilla y cristalería</li><li>Desengrasantes</li><li>Suelos y superficies</li><li>Bactericidas y desinfectantes</li><li>Ambientadores</li><li>Celulosa y complementos</li></ul>
+              <div class="sector__cta">
+                <a class="btn btn--primary" href="catalogo/hosteleria.html">Ver productos <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--text" href="#contacto" data-ask="Hostelería">Pedir asesoramiento <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+              </div>
+              </div>
+            </article>
+            <article class="ficha" id="s-au" data-i="1" hidden>
+              <figure class="ficha__foto"><img src="assets/img/fotos/sm/automocion.webp" srcset="assets/img/fotos/sm/automocion.webp 900w, assets/img/fotos/automocion.webp 1800w" sizes="(min-width: 1024px) 560px, 100vw" alt="Lavado de una rueda con espuma" width="900" height="900" loading="lazy"></figure>
+              <div class="ficha__txt">
+                <p class="kicker">61 productos en catálogo</p>
+                <h3 class="ficha__titulo">Automoción y transporte</h3>
+                <p class="sector__txt">Para talleres, flotas y túneles de lavado tenemos productos para carrocerías, llantas, motores e interiores, además de anticongelantes.</p>
+              <ul class="chips"><li>Lavado de carrocerías</li><li>Limpieza de llantas</li><li>Motores y chasis</li><li>Interiores y plásticos</li><li>Anticongelantes y refrigerantes</li><li>Lavaparabrisas</li></ul>
+              <div class="sector__cta">
+                <a class="btn btn--primary" href="catalogo/automocion-y-transporte.html">Ver productos <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--text" href="#contacto" data-ask="Automoción y transporte">Pedir asesoramiento <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+              </div>
+              </div>
+            </article>
+            <article class="ficha" id="s-in" data-i="2" hidden>
+              <figure class="ficha__foto"><img src="assets/img/fotos/sm/industria.webp" srcset="assets/img/fotos/sm/industria.webp 900w, assets/img/fotos/industria.webp 1800w" sizes="(min-width: 1024px) 560px, 100vw" alt="Nave industrial con maquinaria" width="900" height="600" loading="lazy"></figure>
+              <div class="ficha__txt">
+                <p class="kicker">24 productos en catálogo</p>
+                <h3 class="ficha__titulo">Industria</h3>
+                <p class="sector__txt">Para el mantenimiento industrial fabricamos detergentes ácidos y alcalinos, disolventes, desmoldeantes y aflojatodo.</p>
+              <ul class="chips"><li>Detergentes alcalinos</li><li>Detergentes ácidos</li><li>Disolventes</li><li>Desengrasantes dieléctricos</li><li>Desmoldeantes</li><li>Aflojatodo</li></ul>
+              <div class="sector__cta">
+                <a class="btn btn--primary" href="catalogo/industria.html">Ver productos <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--text" href="#contacto" data-ask="Industria">Pedir asesoramiento <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+              </div>
+              </div>
+            </article>
+            <article class="ficha" id="s-ag" data-i="3" hidden>
+              <figure class="ficha__foto"><img src="assets/img/fotos/sm/agro.webp" srcset="assets/img/fotos/sm/agro.webp 900w, assets/img/fotos/agro.webp 1800w" sizes="(min-width: 1024px) 560px, 100vw" alt="Tanques de acero inoxidable con mangueras en una planta de bebidas" width="900" height="600" loading="lazy"></figure>
+              <div class="ficha__txt">
+                <p class="kicker">23 productos en catálogo</p>
+                <h3 class="ficha__titulo">Agroalimentaria</h3>
+                <p class="sector__txt">Para la industria alimentaria limpiamos y desinfectamos superficies, circuitos y maquinaria con productos con registro H.A.</p>
+              <ul class="chips"><li>Detergentes ácidos</li><li>Alcalinos clorados</li><li>Bactericidas y enzimáticos</li><li>Desengrasantes alcalinos</li><li>Antiespumantes</li><li>Fosas sépticas</li></ul>
+              <div class="sector__cta">
+                <a class="btn btn--primary" href="catalogo/agroalimentaria.html">Ver productos <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--text" href="#contacto" data-ask="Agroalimentaria">Pedir asesoramiento <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+              </div>
+              </div>
+            </article>
+            <article class="ficha" id="s-la" data-i="4" hidden>
+              <figure class="ficha__foto"><img src="assets/img/fotos/sm/lavanderia.webp" srcset="assets/img/fotos/sm/lavanderia.webp 900w, assets/img/fotos/lavanderia.webp 1800w" sizes="(min-width: 1024px) 560px, 100vw" alt="Fila de lavadoras industriales" width="900" height="600" loading="lazy"></figure>
+              <div class="ficha__txt">
+                <p class="kicker">21 productos en catálogo</p>
+                <h3 class="ficha__titulo">Lavandería</h3>
+                <p class="sector__txt">Para lavandería industrial y hospitalaria tenemos detergentes, blanqueantes higienizantes, suavizantes y aditivos.</p>
+              <ul class="chips"><li>Detergentes líquidos</li><li>Detergentes sólidos</li><li>Blanqueantes desinfectantes</li><li>Suavizantes</li><li>Desengrasante textil</li><li>Aditivos</li></ul>
+              <div class="sector__cta">
+                <a class="btn btn--primary" href="catalogo/lavanderia.html">Ver productos <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--text" href="#contacto" data-ask="Lavandería">Pedir asesoramiento <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+              </div>
+              </div>
+            </article>
+            <article class="ficha" id="s-hi" data-i="5" hidden>
+              <figure class="ficha__foto"><img src="assets/img/fotos/sm/higiene.webp" srcset="assets/img/fotos/sm/higiene.webp 900w, assets/img/fotos/higiene.webp 1800w" sizes="(min-width: 1024px) 560px, 100vw" alt="Manos con espuma de jabón en un lavabo de acero" width="900" height="675" loading="lazy"></figure>
+              <div class="ficha__txt">
+                <p class="kicker">14 productos en catálogo</p>
+                <h3 class="ficha__titulo">Higiene</h3>
+                <p class="sector__txt">Para aseos y cuidado de manos fabricamos jabones, geles y cremas de uso profesional, y te damos los dispensadores.</p>
+              <ul class="chips"><li>Jabones, geles y champús</li><li>Pastas y cremas</li><li>Cremas hidratantes</li><li>Dispensadores</li><li>Perfumes</li></ul>
+              <div class="sector__cta">
+                <a class="btn btn--primary" href="catalogo/higiene.html">Ver productos <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--text" href="#contacto" data-ask="Higiene">Pedir asesoramiento <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+              </div>
+              </div>
+            </article>
+            <article class="ficha" id="s-co" data-i="6" hidden>
+              <figure class="ficha__foto"><img src="assets/img/fotos/sm/construccion.webp" srcset="assets/img/fotos/sm/construccion.webp 900w, assets/img/fotos/construccion.webp 1800w" sizes="(min-width: 1024px) 560px, 100vw" alt="Estructura de hormigón en construcción con andamios" width="900" height="676" loading="lazy"></figure>
+              <div class="ficha__txt">
+                <p class="kicker">13 productos en catálogo</p>
+                <h3 class="ficha__titulo">Construcción</h3>
+                <p class="sector__txt">Para obra y prefabricados tenemos desencofrantes, impermeabilizantes, resinas y eliminadores de residuos de obra.</p>
+              <ul class="chips"><li>Desencofrantes</li><li>Impermeabilizantes</li><li>Resinas</li><li>Lubricantes</li><li>Aditivos</li><li>Eliminadores de residuos</li></ul>
+              <div class="sector__cta">
+                <a class="btn btn--primary" href="catalogo/construccion.html">Ver productos <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--text" href="#contacto" data-ask="Construcción">Pedir asesoramiento <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+              </div>
+              </div>
+            </article>
+            <article class="ficha" id="s-ta" data-i="7" hidden>
+              <figure class="ficha__foto"><img src="assets/img/fotos/sm/aguas.webp" srcset="assets/img/fotos/sm/aguas.webp 900w, assets/img/fotos/aguas.webp 1800w" sizes="(min-width: 1024px) 560px, 100vw" alt="Vista aérea de los decantadores de una planta de tratamiento de aguas" width="900" height="675" loading="lazy"></figure>
+              <div class="ficha__txt">
+                <p class="kicker">7 productos en catálogo</p>
+                <h3 class="ficha__titulo">Tratamiento de aguas</h3>
+                <p class="sector__txt">Para circuitos cerrados, estanques y aljibes fabricamos tratamientos del agua, descalcificadores y desincrustantes.</p>
+              <ul class="chips"><li>Tratamiento de circuitos</li><li>Estanques y aljibes</li><li>Descalcificadores y desincrustantes</li></ul>
+              <div class="sector__cta">
+                <a class="btn btn--primary" href="catalogo/tratamiento-de-aguas.html">Ver productos <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--text" href="#contacto" data-ask="Tratamiento de aguas">Pedir asesoramiento <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+              </div>
+              </div>
+            </article>
+            <article class="ficha" id="s-ds" data-i="8" hidden>
+              <figure class="ficha__foto"><img src="assets/img/fotos/sm/dosificacion.webp" srcset="assets/img/fotos/sm/dosificacion.webp 900w, assets/img/fotos/dosificacion.webp 1800w" sizes="(min-width: 1024px) 560px, 100vw" alt="Bombas de dosificación azules conectadas a tuberías" width="900" height="600" loading="lazy"></figure>
+              <div class="ficha__txt">
+                <p class="kicker">2 productos en catálogo</p>
+                <h3 class="ficha__titulo">Sistemas de dosificación</h3>
+                <p class="sector__txt">Con nuestros equipos dosificas y aplicas cada producto con la dosis justa, sin desperdiciar.</p>
+              <ul class="chips"><li>Equipos de dosificación</li><li>Equipos de aplicación</li></ul>
+              <div class="sector__cta">
+                <a class="btn btn--primary" href="catalogo/sistemas-de-dosificacion.html">Ver productos <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn--text" href="#contacto" data-ask="Sistemas de dosificación">Pedir asesoramiento <svg class="ico ico--sm"><use href="#i-arrow"/></svg></a>
+              </div>
+              </div>
+            </article>
+      </div>
+      <nav class="panel-sector__nav" aria-label="Otros sectores">
+        <button class="btn btn--line btn--sm" type="button" data-ps-ant><svg class="ico ico--sm ico--izq"><use href="#i-arrow"/></svg> Anterior</button>
+        <button class="btn btn--line btn--sm" type="button" data-ps-sig>Siguiente sector <svg class="ico ico--sm"><use href="#i-arrow"/></svg></button>
+      </nav>
+    </aside>
+  </div>
+
+
+  <script src="assets/js/app.js" defer></script>
+  <script src="revision.js" data-web="Guica" data-clave="guica" data-api="https://notas-web.soto-ecotrans.workers.dev" defer></script>
+</body>
+</html>

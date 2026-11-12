@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Espacios 3D de los sectores (src/espacio/): pantalla completa sobre la página.
+   Móvil: carrusel de zonas abajo (la del centro es la marcada) y productos en hoja desde abajo.
+   Escritorio: índice de zonas a la izquierda y productos en panel a la derecha.
+   Sin pines ni puntos que laten: la zona marcada lleva un rótulo de plano (punto, línea fina y nombre).
+   Usa las variables de style.css (se carga después).
+   ========================================================================== */
+.tesela__3d {
+  position: absolute; z-index: 3; top: 12px; left: 12px; display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 10px 6px 8px; border-radius: 10px; background: var(--white); color: var(--navy); /* var: en oscuro, pizarra con texto claro */
+  font-size: 11px; font-weight: 650; font-stretch: 112%; letter-spacing: .09em; text-transform: uppercase; box-shadow: var(--shadow);
+}
+.tesela__3d[hidden] { display: none; } /* sin WebGL no se enseña (el display de arriba pisaría al atributo) */
+/* un cubo en perspectiva, en línea: dice «3D» sin un punto que late */
+.tesela__3d::before {
+  content: ''; width: 13px; height: 13px; flex: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%231D93D1' stroke-width='1.6' stroke-linejoin='round'%3E%3Cpath d='M8 1.5 14 5v6l-6 3.5L2 11V5z M2 5l6 3.5L14 5 M8 8.5v6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.esp {
+  position: fixed; inset: 0; z-index: 90; overflow: hidden; background: var(--paper); color: var(--text);
+  font-family: var(--f); -webkit-tap-highlight-color: transparent;
+}
+/* El recorrido es una sala clara aunque la web vaya en modo oscuro: fuera de la página, su propio mundo.
+   (style.css lo hace también con .esp; aquí, además, la cortina de carga, que no cuelga de .esp) */
+.esp, .esp-carga { --navy: #0B4F7C; --g-ink: #0A6699; --g-soft: #DCEBF5; --white: #FFFFFF; --paper: #EEF3F6; --line: rgba(11, 79, 124, .12); --line-2: rgba(11, 79, 124, .22); --text: #0E1A22; --text-2: #3A4953; --text-3: #55636C; color-scheme: light; }
+.esp__tapa { position: absolute; inset: 0; z-index: 4; background: var(--paper); pointer-events: none; }
+
+/* Cortina de carga (src/sectores.js): se abre desde la pieza al tocarla, con el plano de la sala dibujándose
+   (losa, suelo con su retícula, muros y su corte en azul hondo) y una luz que lo recorre mientras llega el 3D. */
+.esp-carga {
+  position: fixed; inset: 0; z-index: 92; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  padding: 80px 24px 120px; background: var(--paper); color: var(--navy); font-family: var(--f);
+}
+.esp-carga .esp__cab { opacity: 1; }
+.esp-carga__plano { width: min(80vw, 460px); height: auto; overflow: visible; }
+.esp-carga__plano path { fill: none; stroke: var(--navy); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: pl-traza .9s cubic-bezier(.6, 0, .2, 1) forwards; }
+.esp-carga__plano .pl-reja { stroke-width: .6; opacity: .35; animation-delay: .75s; }
+.esp-carga__plano .pl-losa { animation-delay: .1s; }
+.esp-carga__plano .pl-suelo { animation-delay: .1s; }
+.esp-carga__plano .pl-muro { animation-delay: .3s; animation-duration: 1.1s; }
+.esp-carga__plano .pl-corte { stroke-width: 4; stroke-linecap: butt; animation-delay: .6s; }
+.esp-carga__plano .pl-luz { stroke: var(--g); stroke-width: 2.4; stroke-dasharray: .1 .9; stroke-dashoffset: 1; opacity: 0; animation: pl-luz 1.8s linear 1.4s infinite; }
+@keyframes pl-traza { to { stroke-dashoffset: 0; } }
+@keyframes pl-luz { from { stroke-dashoffset: 1; opacity: 1; } to { stroke-dashoffset: 0; opacity: 1; } }
+.esp-carga__txt { font-size: 13.5px; color: var(--text-2); }
+.esp__lienzo, .esp__lienzo canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.esp__lienzo canvas { cursor: grab; }
+.esp__lienzo canvas:active { cursor: grabbing; }
+
+.esp__cab, .esp__guia { opacity: 0; transition: opacity .5s var(--ease); }
+.esp.is-listo .esp__cab, .esp.is-listo .esp__guia { opacity: 1; }
+
+.esp__cab { position: absolute; z-index: 6; top: 0; left: 0; right: 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: calc(14px + env(safe-area-inset-top, 0px)) 16px 0; pointer-events: none; }
+.esp__cab > * { pointer-events: auto; }
+.esp__kicker { font-size: 11px; font-weight: 650; font-stretch: 112%; letter-spacing: .09em; text-transform: uppercase; color: var(--g-ink); }
+.esp__kicker i { font-style: normal; color: var(--g); margin: 0 .15em; }
+.esp__tit h2 { margin-top: 4px; font-size: 22px; font-weight: 800; font-stretch: 80%; text-transform: uppercase; line-height: .95; color: var(--navy); letter-spacing: -.005em; }
+.esp__cerrar { display: grid; place-items: center; width: 46px; height: 46px; flex: none; border-radius: var(--r); background: #fff; color: var(--navy); box-shadow: var(--shadow); transition: transform .3s var(--ease); }
+.esp__cerrar:hover { transform: rotate(90deg); }
+.esp.is-foco .esp__tit { opacity: 0; transform: translateY(-8px); }
+.esp__tit { transition: opacity .4s var(--ease), transform .4s var(--ease); }
+
+/* Rótulo de la zona marcada, como en un plano: punto cuadrado sobre el objeto, línea de 1 px y el nombre.
+   El JS mueve .esp__marca al objeto y .esp__marca-pos encima (o debajo si no cabe bajo el título). */
+.esp__marca { position: absolute; z-index: 3; left: 0; top: 0; --l: 30px; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity .25s var(--ease), visibility .25s; will-change: transform; }
+.esp__marca.is-on { opacity: 1; visibility: visible; }
+.esp.is-foco .esp__marca, .esp:not(.is-listo) .esp__marca { opacity: 0; visibility: hidden; }
+.esp__marca::before { content: ''; position: absolute; left: -3px; top: -3px; width: 6px; height: 6px; background: var(--navy); box-shadow: 0 0 0 1.5px #fff; }
+.esp__marca-linea { position: absolute; left: -.5px; bottom: 0; width: 1px; height: var(--l); background: var(--navy); transform-origin: 50% 100%; }
+.esp__marca.is-abajo .esp__marca-linea { bottom: auto; top: 0; transform-origin: 50% 0; }
+.esp__marca-pos { position: absolute; left: 0; top: 0; }
+.esp__marca-etq { position: relative; display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px 0 9px; border-radius: 4px; background: var(--navy); color: #fff; font-size: 14px; font-weight: 650; white-space: nowrap; pointer-events: auto; box-shadow: 0 6px 18px rgba(8, 47, 75, .2); }
+.esp__marca-etq::before { content: ''; position: absolute; inset: -7px -8px; } /* el dedo tiene 48 px aunque el rótulo mida 34 */
+.esp__marca-n { font-size: 19px; font-weight: 300; font-stretch: 75%; line-height: 1; color: #9FD6F5; font-variant-numeric: tabular-nums; }
+.esp__marca-ir { width: 14px; height: 14px; }
+/* con ratón el rótulo solo nombra: se hace clic en el objeto */
+@media (hover: hover) and (pointer: fine) {
+  .esp__marca-etq { pointer-events: none; }
+  .esp__marca-ir { display: none; }
+}
+
+/* Guía: pista + zonas + todos */
+.esp__guia { position: absolute; z-index: 5; left: 0; right: 0; bottom: 0; padding: 0 0 calc(12px + var(--safe-b)); pointer-events: none; transition: opacity .5s var(--ease), transform .6s var(--ease); }
+.esp__guia > * { pointer-events: auto; }
+.esp.is-foco .esp__guia { opacity: 0; transform: translateY(20px); }
+.esp.is-foco .esp__guia > * { pointer-events: none; }
+.esp__pista { margin: 0 16px 10px; font-size: 13px; line-height: 1.4; color: var(--text-2); text-align: center; }
+.esp__pista-e, .esp__pista-r { display: none; }
+/* al entrar, mientras se iluminan los objetos, la pista dice qué significa la luz */
+.esp.is-revela .esp__pista { color: var(--g-ink); font-weight: 650; }
+.esp.is-revela .esp__pista-r { display: inline; }
+.esp.is-revela .esp__pista-m, .esp.is-revela .esp__pista-e { display: none; }
+
+/* Móvil: carrusel. Las tarjetas se centran al deslizar; la del centro es la zona marcada. */
+.esp__zonas {
+  --zw: 232px;
+  position: relative; display: flex; gap: 8px; overflow-x: auto; overscroll-behavior-x: contain;
+  padding: 2px calc(50% - var(--zw) / 2) 6px; scroll-snap-type: x mandatory; scrollbar-width: none;
+}
+.esp__zonas::-webkit-scrollbar { display: none; }
+.esp__zona {
+  flex: 0 0 var(--zw); scroll-snap-align: center; scroll-snap-stop: always;
+  display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; column-gap: 12px; row-gap: 2px; align-items: center;
+  min-height: 66px; padding: 10px 14px 10px 12px; border-radius: var(--r); background: #fff; color: var(--navy); text-align: left;
+  box-shadow: var(--shadow); transition: background-color .3s var(--ease), color .3s var(--ease);
+}
+.esp__num { grid-row: 1 / 3; align-self: center; min-width: 30px; font-size: 32px; font-weight: 300; font-stretch: 75%; line-height: 1; color: var(--g); font-variant-numeric: tabular-nums; letter-spacing: -.01em; transition: color .3s var(--ease); }
+.esp__zn { grid-column: 2; align-self: end; font-size: 16px; font-weight: 650; line-height: 1.15; }
+.esp__zc { grid-column: 2; align-self: start; font-size: 12.5px; color: var(--text-3); transition: color .3s var(--ease); }
+.esp__zc b { font-weight: 650; color: var(--g-ink); transition: color .3s var(--ease); }
+.esp__zi { grid-column: 3; grid-row: 1 / 3; color: var(--g-ink); transition: color .3s var(--ease); }
+.esp__zona.is-activa { background: var(--navy); color: #fff; }
+.esp__zona.is-activa .esp__num { color: #9FD6F5; }
+.esp__zona.is-activa .esp__zc, .esp__zona.is-activa .esp__zc b, .esp__zona.is-activa .esp__zi { color: rgba(255, 255, 255, .78); }
+.esp__zona:active { transform: scale(.98); }
+.esp__todos { display: flex; justify-content: center; align-items: center; gap: 6px; margin: 8px 16px 0; min-height: 36px; font-size: 13.5px; font-weight: 650; color: var(--g-ink); }
+.esp__todos .ico { transition: transform .3s var(--ease); }
+.esp__todos:hover .ico { transform: translateX(3px); }
+
+/* Panel de productos: hoja desde abajo en el móvil */
+.esp__panel { position: absolute; z-index: 7; left: 0; right: 0; bottom: 0; height: 56%; display: flex; flex-direction: column; background: #fff; border-radius: 10px 10px 0 0; box-shadow: 0 -10px 40px rgba(8, 47, 75, .16); outline: none; }
+.esp__panel-cab { display: flex; align-items: center; gap: 6px; padding: 10px 10px 10px 8px; border-bottom: 1px solid var(--line); }
+.esp__volver { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 10px; margin-right: auto; border-radius: var(--r); font-size: 13.5px; font-weight: 650; color: var(--navy); }
+.esp__volver:hover { background: var(--paper); }
+.esp__izq { transform: scaleX(-1); }
+.esp__paso { font-size: 12px; color: var(--text-3); font-variant-numeric: tabular-nums; margin-right: 4px; }
+.esp__paso b { color: var(--navy); font-weight: 650; }
+.esp__flecha { display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--r); background: var(--paper); color: var(--navy); }
+.esp__flecha:hover { background: var(--g-soft); }
+.esp__panel-cuerpo { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 16px 16px calc(20px + var(--safe-b)); }
+.esp__cuantos { font-size: 11px; font-weight: 650; font-stretch: 112%; letter-spacing: .09em; text-transform: uppercase; color: var(--text-3); }
+.esp__cuantos b { color: var(--g-ink); }
+.esp__titulo { margin-top: 6px; font-size: 30px; font-weight: 800; font-stretch: 80%; text-transform: uppercase; line-height: .95; color: var(--navy); }
+.esp__frase { margin-top: 8px; font-size: 15px; color: var(--text-2); line-height: 1.45; }
+.esp__prods { margin-top: 14px; border-top: 1px solid var(--line); list-style: none; padding: 0; }
+.esp__prod { display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: 12px; padding: 10px 2px; border-bottom: 1px solid var(--line); transition: background-color .25s var(--ease); }
+.esp__prod:hover { background: var(--paper); }
+.esp__ph { display: grid; place-items: center; width: 64px; height: 64px; border-radius: var(--r); background: var(--paper); color: var(--line-2); overflow: hidden; }
+.esp__ph img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+.esp__ph svg { width: 26px; height: 36px; }
+.esp__pt { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.esp__pt b { font-size: 15px; font-weight: 650; color: var(--navy); line-height: 1.2; }
+.esp__pt small { font-size: 12.5px; color: var(--text-3); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.esp__fmts { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 2px; }
+.esp__fmts i { font-style: normal; font-size: 11px; font-weight: 650; padding: 2px 6px; border-radius: 3px; background: var(--g-soft); color: var(--g-ink); }
+.esp__ir { color: var(--g-ink); transition: transform .3s var(--ease); }
+.esp__prod:hover .esp__ir { transform: translateX(3px); }
+.esp__cat { width: 100%; margin-top: 18px; }
+.esp__asesor { display: block; margin: 14px auto 0; min-height: 44px; font-size: 13.5px; font-weight: 650; color: var(--g-ink); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (min-width: 760px) {
+  .esp__cab { padding: 26px 28px 0; }
+  .esp__tit h2 { font-size: 34px; }
+  .esp__marca-etq { height: 32px; font-size: 13.5px; }
+  .esp__guia { top: 0; right: auto; bottom: 0; width: 280px; display: flex; flex-direction: column; justify-content: center; padding: 120px 0 28px 28px; }
+  .esp.is-foco .esp__guia { transform: translateX(-20px); }
+  .esp__pista { margin: 0 0 12px; max-width: 250px; text-align: left; }
+  .esp__pista-m { display: none; }
+  .esp__pista-e { display: inline; }
+  /* índice en columna */
+  .esp__zonas { flex-direction: column; gap: 4px; overflow: visible; padding: 0; scroll-snap-type: none; }
+  .esp__zona { flex: none; width: 100%; min-height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 12px; }
+  .esp__zona.is-activa { background: #fff; color: var(--navy); }
+  .esp__zona.is-activa .esp__num { color: var(--g); }
+  .esp__num, .esp__zn, .esp__zc { align-self: center; }
+  .esp__num { min-width: 0; font-size: 12px; font-weight: 400; font-stretch: 100%; color: var(--text-3); }
+  .esp__zn { font-size: 14px; }
+  .esp__zc { margin-left: auto; }
+  .esp__zc b, .esp__zona.is-activa .esp__zc b { display: inline-block; min-width: 22px; padding: 2px 6px; border-radius: 3px; background: var(--g-soft); color: var(--g-ink); font-size: 12px; text-align: center; font-variant-numeric: tabular-nums; }
+  .esp__zp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .esp__zi { display: none; }
+  .esp__zona:hover, .esp__zona:focus-visible, .esp__zona.is-on { background: var(--navy); color: #fff; }
+  .esp__zona:hover .esp__num, .esp__zona:focus-visible .esp__num, .esp__zona.is-on .esp__num { color: #9FD6F5; }
+  .esp__zona:active { transform: none; }
+  .esp__todos { justify-content: flex-start; margin: 14px 0 0; }
+  .esp__panel { left: auto; top: 0; width: min(460px, 42%); height: auto; border-radius: 0; box-shadow: -10px 0 40px rgba(8, 47, 75, .14); }
+  .esp__panel-cab { padding: 18px 20px 14px 14px; }
+  .esp__panel-cuerpo { padding: 24px 28px 32px; }
+  .esp__titulo { font-size: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .esp__marca, .esp__zona { transition: none; }
+  .esp-carga__plano path { animation: none; stroke-dashoffset: 0; }
+  .esp-carga__plano .pl-luz { display: none; }
+}

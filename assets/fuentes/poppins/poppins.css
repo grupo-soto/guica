@@ -1,0 +1,6 @@
+/* Poppins (Indian Type Foundry, SIL Open Font License 1.1), la tipografía de los anuncios de Guica (aprobada el 04-11-2026).
+   En la tienda va en titulares y nombres de producto; el texto de interfaz sigue en Archivo. */
+@font-face { font-family: 'Poppins'; src: url('Poppins-Light.woff2') format('woff2'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('Poppins-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('Poppins-Medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('Poppins-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }

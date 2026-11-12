@@ -1,0 +1,12 @@
+{
+  "name": "Guica · Química profesional",
+  "short_name": "Guica",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#EEF3F6",
+  "theme_color": "#F8FBFD",
+  "icons": [
+    { "src": "/icono-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
