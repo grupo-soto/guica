@@ -237,7 +237,19 @@
           </dl>
           <div class="portsec__acc" data-entra><a class="boton boton--azul" href="#productos">Ver los 152 productos <svg class="ico ico--sm" aria-hidden="true"><use href="#i-down"/></svg></a><a class="boton boton--linea" href="tel:+34916761011"><svg class="ico ico--sm" aria-hidden="true"><use href="#i-phone"/></svg> ¿Cuál me sirve?</a></div>
         </div>
-        <figure class="portsec__foto" data-revela style="--foco-y:38%"><img src="../assets/img/escenas/plancha-limpio.webp" alt="Plancha de cocina limpia junto a una garrafa de Guic Planchas" fetchpriority="high"></figure>
+        <div class="portsec__foto portsec__foto--pasada" data-pasada role="group" aria-label="Antes y después con Guic Planchas">
+      <div class="pasada__marco" data-marco>
+        <figure class="escena is-activa" data-escena="0" style="--foco-y:38%">
+          <img class="escena__img escena__sucio" src="../assets/img/escenas/plancha-sucio.webp" srcset="../assets/img/escenas/sm/plancha-sucio.webp 1080w, ../assets/img/escenas/plancha-sucio.webp 2160w" sizes="(min-width: 1024px) 56vw, 100vw" alt="" fetchpriority="high">
+          <img class="escena__img escena__limpio" src="../assets/img/escenas/plancha-limpio.webp" srcset="../assets/img/escenas/sm/plancha-limpio.webp 1080w, ../assets/img/escenas/plancha-limpio.webp 2160w" sizes="(min-width: 1024px) 56vw, 100vw" alt="Plancha de cocina limpia junto a una garrafa de Guic Planchas">
+        </figure>
+        <div class="pasada__corte" data-corte role="slider" tabindex="0" aria-label="Antes y después: desliza para limpiar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="54">
+          <span class="pasada__linea"></span>
+          <span class="pasada__asa"><svg class="ico" aria-hidden="true"><use href="#i-flechas"/></svg></span>
+          <span class="pasada__rotulo pasada__rotulo--antes">Antes</span>
+          <span class="pasada__rotulo pasada__rotulo--despues">Después</span>
+        </div>
+      </div></div>
       </div>
     </header>
     <div class="container listado" id="productos" data-listado data-ambito="hosteleria">
@@ -1819,30 +1831,7 @@
       <div class="filtros__velo" data-cerrar-filtros></div>
       <nav class="otros" aria-label="Otros sectores"><h2>Otros sectores</h2><ul><li><a href="automocion-y-transporte.html">Automoción y transporte</a></li><li><a href="industria.html">Industria</a></li><li><a href="agroalimentaria.html">Agroalimentaria</a></li><li><a href="lavanderia.html">Lavandería</a></li><li><a href="higiene.html">Higiene</a></li><li><a href="construccion.html">Construcción</a></li><li><a href="tratamiento-de-aguas.html">Tratamiento de aguas</a></li><li><a href="sistemas-de-dosificacion.html">Sistemas de dosificación</a></li></ul></nav>
     </div>
-    <div class="sector-pasada"><section class="pasada pasada--sector" data-pasada aria-label="Así limpian nuestros productos">
-      <div class="pasada__marco" data-marco>
-        <figure class="escena is-activa" data-escena="0" style="--foco-y:38%">
-          <img class="escena__img escena__sucio" src="../assets/img/escenas/plancha-sucio.webp" srcset="../assets/img/escenas/sm/plancha-sucio.webp 1080w, ../assets/img/escenas/plancha-sucio.webp 2160w" sizes="100vw" alt="" fetchpriority="high">
-          <img class="escena__img escena__limpio" src="../assets/img/escenas/plancha-limpio.webp" srcset="../assets/img/escenas/sm/plancha-limpio.webp 1080w, ../assets/img/escenas/plancha-limpio.webp 2160w" sizes="100vw" alt="Plancha de cocina limpia junto a una garrafa de Guic Planchas">
-        </figure>
-        <div class="pasada__velo" aria-hidden="true"></div>
-        <div class="pasada__textos">
-          <div class="pasada__texto is-activo" data-texto="0">
-            <p class="pasada__sector">Hostelería · Guic Planchas</p>
-            <h2 class="pasada__h h-anuncio"><span>Grasa quemada</span> <b>de todo un día.</b></h2>
-            <p class="pasada__p">Desincrusta la grasa requemada de planchas, freidoras y hornos en una pasada.</p>
-            <div class="pasada__botones"><a class="boton boton--blanco" href="../producto/guic-planchas.html">Ver Guic Planchas</a></div>
-          </div>
-        </div>
-        <div class="pasada__corte" data-corte role="slider" tabindex="0" aria-label="Antes y después: desliza para limpiar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="54">
-          <span class="pasada__linea"></span>
-          <span class="pasada__asa"><svg class="ico" aria-hidden="true"><use href="#i-flechas"/></svg></span>
-          <span class="pasada__rotulo pasada__rotulo--antes">Antes</span>
-          <span class="pasada__rotulo pasada__rotulo--despues">Después</span>
-        </div>
-      </div>
-      
-    </section></div>
+    
     <section class="confianza" aria-label="Por qué comprar a Guica">
       <div class="container">
         <ul class="confianza__lista">

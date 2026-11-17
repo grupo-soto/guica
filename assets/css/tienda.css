@@ -347,6 +347,10 @@ body.tienda.is-locked { overflow: hidden; }
 .portsec__in { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
 .portsec__foto { position: relative; order: -1; margin: 0; aspect-ratio: 16 / 10; border-radius: 20px; overflow: hidden; background: var(--gris); }
 .portsec__foto img { width: 100%; height: 100%; object-fit: cover; object-position: 72% var(--foco-y, 50%); }
+/* 17-11: con escena, la foto es su antes y después (la pasada sin texto, que va al lado) y llena el marco */
+.portsec__foto .pasada__marco { position: absolute; inset: 0; height: auto; min-height: 0; max-height: none; border-radius: inherit; }
+.portsec__foto .pasada__asa { top: 46%; }
+.portsec__foto .pasada__rotulo { bottom: 14px; }
 .portsec__txt { display: grid; gap: 12px; align-content: start; justify-items: start; min-width: 0; }
 .portsec__txt .migas { padding: 0; }
 .portsec__h { font-size: clamp(2.7rem, 12.5vw, 5.8rem); line-height: .98; letter-spacing: -.035em; max-width: 100%; }
