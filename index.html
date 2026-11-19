@@ -79,6 +79,10 @@
 </head>
 <body>
 
+  <!-- Apertura: al abrir la portada, el logo grande y centrado; cuando todo está listo vuela a su sitio en la cabecera
+       (src/carga.js). Solo se ve mientras <html> lleva «cargando»: sin JS o con movimiento reducido, nada. -->
+  <div class="apertura" aria-hidden="true"><img src="assets/marca/logos/guica.png" alt="" width="600" height="282"></div>
+
   <!-- Iconos y piezas gráficas -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
@@ -322,7 +326,7 @@
             <span class="mas__capa is-on" data-fase="0" style="background-image: url(assets/img/nave/sm/lab-estanteria-sel.webp)" data-img-l="assets/img/nave/lab-estanteria-sel.webp">MÁS</span>
             <span class="mas__capa" data-fase="1" style="background-image: url(assets/img/nave/sm/fab-cubas-sel.webp)" data-img-l="assets/img/nave/fab-cubas-sel.webp">MÁS</span>
             <span class="mas__capa" data-fase="2" style="background-image: url(assets/img/nave/sm/env-llenadora-sel.webp)" data-img-l="assets/img/nave/env-llenadora-sel.webp">MÁS</span>
-            <span class="mas__capa" data-fase="3" style="background-image: url(assets/img/nave/sm/alm-bidones-sel.webp)" data-img-l="assets/img/nave/alm-bidones-sel.webp">MÁS</span>
+            <span class="mas__capa" data-fase="3" style="background-image: url(assets/img/nave/sm/env-linea-sel.webp)" data-img-l="assets/img/nave/env-linea-sel.webp">MÁS</span>
           </span>
           <span class="sr">más</span>
           <span class="h-resto"><span class="h-que">que fabricantes de</span> <span class="h-pq">productos químicos.</span></span>
@@ -567,7 +571,7 @@
           <article class="paso">
             <figure class="paso__ilus">
             <svg class="r-est r-est--3" viewBox="0 0 400 300" overflow="visible" aria-hidden="true">
-              <g class="r-etq"><circle cx="18" cy="16" r="3" fill="#1D93D1"/><text x="28" y="20">LLENADO · 5 · 10 · 25 L</text></g>
+              <g class="r-etq"><circle cx="18" cy="16" r="3" fill="#1D93D1"/><text x="28" y="20">LLENADO · DE 250 ML A 1.000 L</text></g>
               <defs><clipPath id="r-cp-garrafa"><path d="M156 262H244Q250 262 250 256V162Q250 152 240 148L222 142V134H206V142H176Q156 142 156 162Z"/></clipPath></defs>
               <g class="r-tubo">
                 <path class="r-stub" d="M-36 280H330" stroke="url(#r-trama-tubo)" stroke-width="12" stroke-linecap="round" fill="none"/>
@@ -600,7 +604,7 @@
             <div class="paso__txt">
               <span class="paso__n">03</span>
               <h3>Envasamos</h3>
-              <p>En nuestra propia línea llenamos garrafas de 5, 10 y 25 litros, sacos y otros envases bajo pedido.</p>
+              <p>En nuestra propia línea llenamos desde envases de 250 ml hasta contenedores de 1.000 litros, y también servimos en cisterna.</p>
             </div>
           </article>
           <article class="paso">
@@ -689,7 +693,7 @@
         <div class="contacto__info" data-reveal>
           <p class="kicker">Contacto</p>
           <h2 class="titulo"><span class="t-navy">¿Hablamos?</span></h2>
-          <p class="head__lead">Cuéntanos qué necesitas limpiar y te recomendamos el producto y el formato. Y si prefieres verlo, ven a la fábrica.</p>
+          <p class="head__lead">Cuéntanos qué necesitas limpiar y te recomendamos el producto y el formato. Ven a la fábrica o solicita una entrevista con nuestros técnicos comerciales.</p>
           <a class="tel" href="tel:+34916761011">916 761 011</a>
           <div class="contacto__cta">
             <a class="btn btn--primary" href="tel:+34916761011"><svg class="ico ico--sm"><use href="#i-phone"/></svg> Llamar ahora</a>
@@ -753,7 +757,7 @@
         <p>Calidad ISO 9001 y gestión ambiental ISO 14001 certificadas por OCLEM. Tus datos solo se usan para prepararte el presupuesto; la tienda no usa cookies de seguimiento ni pide datos de pago.</p>
       </div>
       <div class="pie__fila">
-        <a class="pie__grupo" href="https://gruposoto.net/" target="_blank" rel="noopener"><span>Una empresa de</span><img src="assets/marca/logos/gs-logo.png" alt="Grupo Soto" loading="lazy"></a>
+        <a class="pie__grupo" href="https://gruposoto.net/" target="_blank" rel="noopener"><span>Una empresa de</span><img src="assets/marca/logos/gs-logo-light.png" alt="Grupo Soto" width="640" height="141" loading="lazy"></a>
         <nav class="pie__redes" aria-label="Redes sociales">
           <a href="https://www.instagram.com/guica_sa/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a>
           <a href="https://www.linkedin.com/company/guica-sa" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico" aria-hidden="true"><use href="#i-in"/></svg></a>

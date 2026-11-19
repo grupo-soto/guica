@@ -287,7 +287,8 @@ html[data-tema='oscuro'] .cab__tema .i-luna { display: none; }
 .pie__sellos p { flex: 1 1 260px; font-size: 14px; }
 .pie__fila { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; }
 .pie__grupo { display: inline-flex; align-items: center; gap: 10px; font-size: 13.5px; }
-.pie__grupo img { height: 22px; width: auto; filter: brightness(0) invert(1); opacity: .85; }
+/* la versión del logo para fondo oscuro, tal cual: con el filtro a blanco el isotipo se quedaba en un círculo liso */
+.pie__grupo img { height: 26px; width: auto; }
 .pie__redes { display: flex; gap: 6px; }
 .pie__redes a { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 999px; background: rgba(255, 255, 255, .08); }
 .pie__legal { width: 100%; font-size: 13.5px; color: #9FB0BF; }
@@ -437,4 +438,22 @@ html.carga-sale::before, html.carga-sale::after { opacity: 0; }
 @keyframes carga-ve { from { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) {
   html.cargando::after { animation: carga-ve .3s ease .25s backwards; border-color: var(--azul); }
+}
+/* Apertura de la portada (19-11, nota de Mario Cano en la prueba: «según abre la página, el logo de Guica, más grande y
+   centrado»): mientras carga, el logo grande en el centro, en lugar del círculo; src/carga.js lo hace volar hasta el de la
+   cabecera. Lleva la misma placa que el de la cabecera (en oscuro, blanca), a escala, para que encaje al llegar. */
+.apertura { display: none; --ap-w: min(62vw, 340px); }
+html.cargando .apertura, html.apertura-vuela .apertura { display: grid; place-items: center; position: fixed; inset: 0; z-index: 10002; pointer-events: none; }
+.apertura img { width: var(--ap-w); height: auto; animation: apertura-ve .5s var(--ease) both; }
+/* en oscuro, la placa blanca con las proporciones de la de la cabecera (34 px de alto con 5 × 9 px de margen) */
+html[data-temas][data-tema='oscuro'] .apertura img { padding: calc(var(--ap-w) * .0724) calc(var(--ap-w) * .13); border-radius: calc(var(--ap-w) * .13); background: var(--logo-fondo); }
+@media (prefers-color-scheme: dark) {
+  html[data-temas]:not([data-tema='claro']) .apertura img { padding: calc(var(--ap-w) * .0724) calc(var(--ap-w) * .13); border-radius: calc(var(--ap-w) * .13); background: var(--logo-fondo); }
+}
+html.cargando:has(.apertura)::after { display: none; } /* con el logo no hace falta el círculo */
+html.apertura-vuela .cab__logo img { visibility: hidden; }
+@keyframes apertura-ve { from { opacity: 0; transform: scale(.96); } }
+@media (prefers-reduced-motion: reduce) {
+  html.cargando .apertura { display: none; }
+  html.cargando:has(.apertura)::after { display: block; }
 }
