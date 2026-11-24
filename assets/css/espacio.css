@@ -60,6 +60,12 @@
 .esp__cerrar:hover { transform: rotate(90deg); }
 .esp.is-foco .esp__tit { opacity: 0; transform: translateY(-8px); }
 .esp__tit { transition: opacity .4s var(--ease), transform .4s var(--ease); }
+/* Selector de maqueta del mismo sector (Agroalimentaria: industria láctea · industria cárnica, 24-11) */
+.esp__vars { display: inline-flex; gap: 2px; margin-top: 10px; padding: 3px; border-radius: 999px; background: var(--white); box-shadow: 0 2px 10px rgba(11, 79, 124, .1); pointer-events: auto; }
+.esp__vars button { min-height: 34px; padding: 0 14px; border-radius: 999px; font-size: 12.5px; font-weight: 650; color: var(--text-2); transition: background-color .25s var(--ease), color .25s var(--ease); }
+.esp__vars button[aria-pressed='true'] { background: var(--navy); color: #fff; }
+.esp.is-foco .esp__vars { pointer-events: none; }
+.esp__vars button:not([aria-pressed='true']):hover { background: var(--g-soft); color: var(--navy); }
 
 /* Rótulo de la zona marcada, como en un plano: punto cuadrado sobre el objeto, línea de 1 px y el nombre.
    El JS mueve .esp__marca al objeto y .esp__marca-pos encima (o debajo si no cabe bajo el título). */
@@ -148,6 +154,30 @@
 .esp__prod:hover .esp__ir { transform: translateX(3px); }
 .esp__cat { width: 100%; margin-top: 18px; }
 .esp__asesor { display: block; margin: 14px auto 0; min-height: 44px; font-size: 13.5px; font-weight: 650; color: var(--g-ink); text-decoration: underline; text-underline-offset: 3px; }
+/* Secciones dentro de una lista (lavavajillas por dureza, Manix, Vasol…): rótulo de etiqueta y, si va ordenada, la regla
+   de dureza (blanda → muy dura) y un escalón en cada producto */
+.esp__sec { margin-top: 22px; }
+.esp__sec + .esp__prods, .esp__sec ~ .esp__prods { margin-top: 8px; }
+.esp__sec h4 { font-size: 11px; font-weight: 650; font-stretch: 112%; letter-spacing: .09em; text-transform: uppercase; color: var(--g-ink); }
+.esp__sec p { margin-top: 3px; font-size: 13px; color: var(--text-3); }
+.esp__regla { display: flex; justify-content: space-between; margin-top: 8px; padding-top: 7px; position: relative; font-size: 10.5px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
+.esp__regla::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--g-soft), var(--navy)); }
+.esp__regla i { font-style: normal; }
+.esp__dur { display: flex; gap: 2px; margin-top: 3px; }
+.esp__dur i { width: 12px; height: 4px; border-radius: 1px; background: var(--g-soft); }
+.esp__dur i.on { background: var(--g-ink); }
+/* Etiqueta «Apto industria alimentaria» (nota #71): la marca de los productos que su ficha da para alimentos */
+.esp__fmts .esp__ali { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 650; padding: 1px 6px 1px 4px; border-radius: 3px; border: 1px solid #157A4A; color: #0E5A35; background: #E8F6EE; }
+.esp__ali svg { width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+/* Un grupo de productos que se enseña como uno (ambientadores, bolsas): la cifra sobre la foto */
+.esp__prod--grupo .esp__ph { position: relative; }
+.esp__gn { position: absolute; right: 3px; bottom: 3px; min-width: 22px; padding: 1px 5px; border-radius: 10px; background: var(--navy); color: #fff; font-size: 11px; font-weight: 700; text-align: center; }
+/* Equipos de dosificación: asesoramiento y salto al 3D de Sistemas de dosificación */
+.esp__dosif { margin-top: 20px; padding: 16px; border-radius: var(--r); background: var(--g-soft); }
+.esp__dosif p { font-size: 14px; line-height: 1.45; color: var(--text-2); }
+.esp__dosif p b { display: block; margin-bottom: 2px; color: var(--navy); font-size: 15px; }
+.esp__dosif-b { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.esp__dosif-b .btn { flex: 1 1 180px; }
 
 @media (min-width: 760px) {
   .esp__cab { padding: 26px 28px 0; }
