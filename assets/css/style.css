@@ -232,15 +232,12 @@ h2.titulo span { display: block; }
 /* Tira de la nave: alturas y desniveles distintos, nada de rejilla */
 .tira { position: relative; z-index: 1; margin-top: 44px; padding-bottom: 56px; overflow: hidden; }
 .tira__pista { display: flex; align-items: flex-start; gap: 12px; width: max-content; padding-left: var(--pad); will-change: transform; }
-.tira__foto { flex: none; }
-.tira__foto img { height: 100%; width: auto; object-fit: cover; border-radius: var(--r); background: var(--g-soft); }
+/* todas del mismo tamaño y en línea recta, con el rótulo debajo a la misma altura (25-11: antes iban en tres tamaños y
+   a distinta altura, y no gustaba); las verticales se recortan a 4:3 centradas en lo que importa */
+.tira__foto { flex: none; height: 200px; }
+.tira__foto img { height: 100%; width: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r); background: var(--g-soft); }
 .tira__foto figcaption { margin-top: 8px; font-size: 10px; font-weight: 650; font-stretch: 112%; letter-spacing: .09em; text-transform: uppercase; color: var(--text-3); }
-.tira__foto--a { height: 190px; }
-.tira__foto--a img { aspect-ratio: 3 / 2; }
-.tira__foto--b { height: 140px; margin-top: 52px; }
-.tira__foto--b img { aspect-ratio: 3 / 2; }
-.tira__foto--c { height: 230px; margin-top: 18px; }
-.tira__foto--c img { aspect-ratio: 2 / 3; }
+.tira__foto--c img { object-position: 50% 58%; }
 
 /* ==========================================================================
    Secciones
@@ -451,9 +448,7 @@ h2.titulo span { display: block; }
   .h-resto { font-size: 6.4vw; }
   .fases li { font-size: 11.5px; }
   .fases b { font-size: 26px; }
-  .tira__foto--a { height: 260px; }
-  .tira__foto--b { height: 190px; margin-top: 70px; }
-  .tira__foto--c { height: 320px; }
+  .tira__foto { height: 250px; }
   .section { padding: 110px 0; }
   .mosaico { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 190px; gap: 10px; }
   .tesela__nombre { font-size: 18px; }
@@ -489,9 +484,7 @@ h2.titulo span { display: block; }
   .tira { padding-bottom: 80px; }
   .hero__lead { font-size: 18px; }
   .tira { margin-top: 64px; }
-  .tira__foto--a { height: 300px; }
-  .tira__foto--b { height: 220px; margin-top: 80px; }
-  .tira__foto--c { height: 380px; margin-top: 20px; }
+  .tira__foto { height: 290px; }
   .tira__pista { gap: 20px; }
 
   .section { padding: 140px 0; }

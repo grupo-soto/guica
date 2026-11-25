@@ -160,15 +160,19 @@
 .esp__sec + .esp__prods, .esp__sec ~ .esp__prods { margin-top: 8px; }
 .esp__sec h4 { font-size: 11px; font-weight: 650; font-stretch: 112%; letter-spacing: .09em; text-transform: uppercase; color: var(--g-ink); }
 .esp__sec p { margin-top: 3px; font-size: 13px; color: var(--text-3); }
-.esp__regla { display: flex; justify-content: space-between; margin-top: 8px; padding-top: 7px; position: relative; font-size: 10.5px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
+.esp__regla { display: flex; justify-content: space-between; margin: 8px 0 0 78px; max-width: 220px; padding-top: 7px; position: relative; font-size: 10.5px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
 .esp__regla::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--g-soft), var(--navy)); }
 .esp__regla i { font-style: normal; }
-.esp__dur { display: flex; gap: 2px; margin-top: 3px; }
-.esp__dur i { width: 12px; height: 4px; border-radius: 1px; background: var(--g-soft); }
-.esp__dur i.on { background: var(--g-ink); }
+/* la regla de la cabecera va encima de la columna de texto (78 px = foto + hueco), a lo ancho de la de cada producto;
+   en cada producto, la misma regla en pequeño con un punto donde cae (25-11: «que las distribuciones se entiendan mejor») */
+.esp__dur { position: relative; display: block; height: 4px; margin: 9px 0 7px; max-width: 220px; border-radius: 2px; background: linear-gradient(90deg, var(--g-soft), var(--navy)); }
+.esp__dur i { position: absolute; top: 50%; width: 13px; height: 13px; border-radius: 50%; background: var(--white); border: 3px solid var(--g-ink); box-shadow: 0 1px 3px rgba(11, 79, 124, .25); transform: translate(-50%, -50%); }
+/* formatos a la izquierda y sellos a la derecha, en una sola línea (bajan a la siguiente si no caben) */
+.esp__pie { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; margin-top: 4px; }
+.esp__pie .esp__fmts { margin-top: 0; }
 /* Sellos del producto (nota #71: apto industria alimentaria, registro HA, bactericida…; src/catalogo/sellos.mjs) */
-.esp__sellos { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
-.esp__sellos .sello { width: 40px; height: 40px; flex: none; }
+.esp__sellos { display: flex; flex-wrap: wrap; gap: 3px; margin-left: auto; }
+.esp__sellos .pegatina { width: 34px; height: 34px; flex: none; }
 /* Un grupo de productos que se enseña como uno (ambientadores, bolsas): la cifra sobre la foto */
 .esp__prod--grupo .esp__ph { position: relative; }
 .esp__gn { position: absolute; right: 3px; bottom: 3px; min-width: 22px; padding: 1px 5px; border-radius: 10px; background: var(--navy); color: #fff; font-size: 11px; font-weight: 700; text-align: center; }
