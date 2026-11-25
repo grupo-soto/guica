@@ -166,9 +166,9 @@
 .esp__dur { display: flex; gap: 2px; margin-top: 3px; }
 .esp__dur i { width: 12px; height: 4px; border-radius: 1px; background: var(--g-soft); }
 .esp__dur i.on { background: var(--g-ink); }
-/* Etiqueta «Apto industria alimentaria» (nota #71): la marca de los productos que su ficha da para alimentos */
-.esp__fmts .esp__ali { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 650; padding: 1px 6px 1px 4px; border-radius: 3px; border: 1px solid #157A4A; color: #0E5A35; background: #E8F6EE; }
-.esp__ali svg { width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+/* Sellos del producto (nota #71: apto industria alimentaria, registro HA, bactericida…; src/catalogo/sellos.mjs) */
+.esp__sellos { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+.esp__sellos .sello { width: 40px; height: 40px; flex: none; }
 /* Un grupo de productos que se enseña como uno (ambientadores, bolsas): la cifra sobre la foto */
 .esp__prod--grupo .esp__ph { position: relative; }
 .esp__gn { position: absolute; right: 3px; bottom: 3px; min-width: 22px; padding: 1px 5px; border-radius: 10px; background: var(--navy); color: #fff; font-size: 11px; font-weight: 700; text-align: center; }

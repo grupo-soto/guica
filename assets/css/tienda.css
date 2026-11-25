@@ -196,9 +196,11 @@ body.tienda.is-locked { overflow: hidden; }
 .prod__sello { position: absolute; z-index: 1; top: 10px; left: 10px; display: flex; flex-wrap: wrap; gap: 4px; }
 .prod__sello span { padding: 4px 9px; border-radius: 999px; background: var(--papel); font-size: 11.5px; font-weight: 700; color: var(--tinta-2); box-shadow: 0 2px 8px rgba(8, 20, 34, .06); }
 .prod__sello .es-ficha { color: var(--azul-t); }
-/* Apto industria alimentaria (nota #71 de Guica): verde, para que se distinga de un vistazo de «Ficha técnica» */
-.prod__sello .es-ali { display: inline-flex; align-items: center; gap: 4px; color: var(--ok-texto); }
-.prod__sello .es-ali .ico { width: 12px; height: 12px; }
+/* Sellos sobre la foto, como pegatinas (nota #71 de Guica; src/catalogo/sellos.mjs) */
+.prod__sellos { position: absolute; z-index: 1; top: 8px; right: 8px; display: flex; flex-direction: column; gap: 3px; pointer-events: none; }
+.prod__sellos .sello { width: 46px; height: 46px; filter: drop-shadow(0 2px 4px rgba(8, 20, 34, .16)); }
+.prod__sellos .sello:first-child { transform: rotate(-8deg); }
+@media (max-width: 639px) { .prod__sellos .sello { width: 38px; height: 38px; } }
 .prod__txt { display: flex; flex-direction: column; gap: 5px; padding: 12px 2px 0; flex: 1; }
 .prod__uso { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--azul-t); }
 .prod__nombre { font-family: var(--display); font-size: 17px; font-weight: 600; letter-spacing: -.012em; line-height: 1.2; overflow-wrap: anywhere; }
@@ -471,8 +473,13 @@ body.tienda.is-locked { overflow: hidden; }
 .datos-clave li { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 12px; border-radius: 999px; background: var(--gris); font-size: 13.5px; font-weight: 600; }
 .datos-clave .ico { width: 16px; height: 16px; color: var(--azul-t); }
 .datos-clave a { text-decoration: underline; text-underline-offset: 3px; }
-.datos-clave .datos-clave__ali { color: var(--ok-texto); background: var(--ok-fondo); }
-.datos-clave .datos-clave__ali .ico { color: var(--ok-texto); }
+/* Sellos de la ficha: la fila de sellos y qué quiere decir cada uno */
+.sellos-ficha { margin-top: 18px; padding: 16px; border: 1px solid var(--linea); border-radius: 16px; }
+.sellos-ficha__fila { display: flex; flex-wrap: wrap; gap: 6px; }
+.sellos-ficha .sello { width: 60px; height: 60px; }
+.sellos-ficha__que { display: grid; gap: 6px; list-style: none; margin: 12px 0 0; padding: 12px 0 0; border-top: 1px solid var(--linea); font-size: 13.5px; line-height: 1.45; color: var(--tinta-2); }
+.sellos-ficha__que b { color: var(--tinta); }
+.sellos-ficha__n { font-weight: 650; color: var(--tinta); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .compra { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 18px; border-radius: 22px; border: 1.5px solid var(--linea); background: var(--papel); }
 .compra__precio { display: grid; gap: 2px; }
 .compra__precio b { font-family: var(--display); font-size: 20px; font-weight: 600; letter-spacing: -.01em; }
